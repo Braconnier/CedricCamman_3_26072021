@@ -1,0 +1,26 @@
+a {
+  text-decoration: none;
+  color: #000;
+}
+html,
+body {
+  $base-font-size: 16px;
+  background: #f6f6f6;
+  width: 375px;
+  margin: 0 auto;
+}
+header {
+  height: 63px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 2px 2px 2px #e6e6e6;
+
+  img {
+    scale: 0.5;
+  }
+  i {
+    scale: 2;
+  }
+}

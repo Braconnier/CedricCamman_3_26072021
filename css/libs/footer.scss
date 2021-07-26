@@ -1,0 +1,23 @@
+footer {
+  margin-top: 3rem;
+  height: 198px;
+  background: #353535;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  padding: 1rem;
+}
+footer a {
+  color: #fff;
+  display: flex;
+}
+footer i {
+  scale: 0.75;
+  padding-right: 0.5rem;
+}
+.svg {
+  scale: 0.5;
+  filter: brightness(100);
+  margin-left: -3rem;
+  padding-bottom: 1rem;
+}

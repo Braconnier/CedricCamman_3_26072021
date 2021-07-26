@@ -1,0 +1,69 @@
+@import "./libs/reset.css";
+/*@import "./libs/responsive.scss";
+@import "./libs/mixins.scss";*/
+@import "./libs/functions.scss";
+@import "./libs/header.scss";
+@import "./libs/footer.scss";
+
+.locate {
+  background: #eaeaea;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding-left: 5rem;
+  i {
+    margin-right: 1rem;
+  }
+}
+.fonctionnement {
+  display: flex;
+  flex-flow: column;
+}
+
+.modeemploi {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+nav {
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+}
+.cardresto {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  flex-flow: column;
+  box-shadow: 2px 2px 4px #e6e6e6;
+  border-radius: 1rem;
+}
+.imgbox {
+  width: 100%;
+  height: 174px;
+  position: relative;
+}
+.imgbox > img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 1rem 1rem 0 0;
+}
+.blocdesc {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 1rem;
+  h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  i {
+    scale: 1.5;
+  }
+  .fas.fa-heart {
+    display: none;
+  }
+}
