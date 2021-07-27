@@ -17,11 +17,15 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  box-shadow: 2px 2px 2px #e6e6e6; }
+  box-shadow: 2px 2px 2px #e6e6e6;
+  position: relative; }
   header img {
-    scale: 0.5; }
-  header i {
-    scale: 2; }
+    width: 50%;
+    height: 50%; }
+  header .back {
+    position: absolute;
+    top: 25px;
+    left: 10px; }
 
 footer {
   margin-top: 3rem;
