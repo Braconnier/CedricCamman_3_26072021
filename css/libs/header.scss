@@ -5,7 +5,7 @@ a {
 html,
 body {
   font-size: $base-font-size;
-  font-family: sans-serif;
+  font-family: "roboto", sans-serif;
   background: #f6f6f6;
   width: 375px;
   margin: 0 auto;
@@ -15,15 +15,15 @@ header {
   color: #000;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   box-shadow: 2px 2px 2px #e6e6e6;
   position: relative;
 
-  img {
-    width: 50%;
-    height: 50%;
+  h1 {
+    font-family: "Shrikhand", sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
   }
-
   .back {
     position: absolute;
     top: 25px;
