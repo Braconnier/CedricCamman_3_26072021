@@ -6,6 +6,8 @@
   justify-content: center;
   align-items: center;
   border-radius: 25px;
+  color: #fff;
+  font-family: "roboto", sans-serif;
   background: rgb(147, 86, 220);
   background: linear-gradient(
     0deg,
@@ -14,8 +16,4 @@
     rgba(255, 121, 218, 1) 100%
   );
   box-shadow: 0px 2px 4px #bababa;
-  a {
-    color: #fff;
-    font-family: "roboto", sans-serif;
-  }
 }

@@ -5,7 +5,7 @@
 @import "./libs/header.scss";
 @import "./libs/footer.scss";
 @import "./libs/button.scss";
-
+@import "./libs/main.scss";
 $primary: #9356dc;
 $secondary: #ff79da;
 $tertiary: #92e2d0;
@@ -34,7 +34,7 @@ $tertiary: #92e2d0;
   }
   .reservez {
     font-size: 1.6rem;
-    font-weight: 500;
+    font-weight: bold;
   }
   .decouvrez {
     font-weight: lighter;
@@ -45,6 +45,8 @@ $tertiary: #92e2d0;
   display: flex;
   flex-flow: column;
   justify-content: space-evenly;
+  align-items: center;
+  background: #fff;
 }
 
 .modeemploi {
@@ -90,6 +92,7 @@ nav {
   position: absolute;
   border-radius: 1rem 1rem 0 0;
 }
+
 .blocdesc {
   display: flex;
   justify-content: space-between;
@@ -103,8 +106,45 @@ nav {
   i {
     scale: 1.5;
   }
-
-  .fas.fa-heart {
-    display: none;
+  .like {
+    .fas.fa-heart {
+      display: none;
+    }
+  }
+}
+.modeemploi {
+  width: 322px;
+  height: 72px;
+  background: #f6f6f6;
+  box-shadow: 2px 2px 4px #e6e6e6;
+  border-radius: 1rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  &:last-of-type {
+    background: #f4edfe;
+  }
+  .fa-mobile-alt,
+  .fa-list {
+    color: grey;
+  }
+  .fa-store {
+    color: $primary;
+  }
+  .numero {
+    position: absolute;
+    top: calc(50%-1.5rem);
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.5rem;
+    height: 1.5rem;
+    background: $primary;
+    color: #fff;
+    border-radius: 50%;
+    margin-left: -1rem;
   }
 }

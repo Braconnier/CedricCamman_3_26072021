@@ -7,7 +7,7 @@ body {
   font-size: $base-font-size;
   font-family: "roboto", sans-serif;
   background: #f6f6f6;
-  width: 375px;
+  max-width: 375px;
   margin: 0 auto;
 }
 header {

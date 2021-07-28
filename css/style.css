@@ -10,7 +10,7 @@ body {
   font-size: 16px;
   font-family: "roboto", sans-serif;
   background: #f6f6f6;
-  width: 375px;
+  max-width: 375px;
   margin: 0 auto; }
 
 header {
@@ -56,12 +56,145 @@ footer {
   justify-content: center;
   align-items: center;
   border-radius: 25px;
+  color: #fff;
+  font-family: "roboto", sans-serif;
   background: #9356dc;
   background: linear-gradient(0deg, #9356dc 0%, #9356dc 20%, #ff79da 100%);
   box-shadow: 0px 2px 4px #bababa; }
-  .button a {
+
+a {
+  text-decoration: none;
+  color: #000; }
+
+html,
+body {
+  font-size: 16px;
+  font-family: "roboto", sans-serif;
+  background: #f6f6f6;
+  max-width: 375px;
+  margin: 0 auto; }
+
+header {
+  height: 63px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 2px #e6e6e6;
+  position: relative; }
+  header h1 {
+    font-family: "Shrikhand", sans-serif;
+    font-weight: bold;
+    font-size: 2rem; }
+  header .back {
+    position: absolute;
+    top: 25px;
+    left: 10px; }
+
+footer {
+  margin-top: 3rem;
+  height: 198px;
+  background: #353535;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  padding: 1rem; }
+  footer a {
     color: #fff;
-    font-family: "roboto", sans-serif; }
+    display: flex; }
+  footer i {
+    scale: 0.75;
+    padding-right: 0.5rem; }
+  footer h1 {
+    font-family: "Shrikhand", sans-serif;
+    padding: 0.5rem 0; }
+
+.imgboxresto {
+  max-width: 100%;
+  height: 256px;
+  position: relative; }
+
+.imgboxresto > img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute; }
+
+.titre {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 2rem;
+  margin-top: -4rem;
+  background: #f6f6f6;
+  position: relative;
+  width: 100%;
+  height: 80px;
+  border-radius: 2rem; }
+  .titre h1 {
+    padding-left: 1rem;
+    font-family: "shrikhand", sans-serif;
+    font-size: 1.8rem; }
+  .titre .like {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    right: 37px;
+    scale: 1.5; }
+    .titre .like .fas.fa-heart {
+      display: none; }
+
+.resto {
+  max-width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: start;
+  gap: 1rem; }
+
+.trait {
+  width: 40px;
+  height: 3px;
+  background: #92e2d0; }
+
+.carte {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1rem;
+  padding: 1rem; }
+
+.card {
+  max-width: 350px;
+  height: 68px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-radius: 12px;
+  box-shadow: 2px 2px 4px #e6e6e6;
+  padding: 1rem; }
+  .card .check {
+    display: none; }
+
+.plat {
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  text-overflow: ellipsis; }
+  .plat .nomplat {
+    font-size: 1.2rem;
+    font-weight: bold; }
+
+.tarif {
+  padding-bottom: 0.5rem;
+  font-weight: bold; }
+
+.btncommand {
+  width: 100%;
+  justify-content: center;
+  display: flex; }
 
 .locate {
   background: #eaeaea;
@@ -84,7 +217,7 @@ footer {
     padding: 0 2rem; }
   .blocfonc .reservez {
     font-size: 1.6rem;
-    font-weight: 500; }
+    font-weight: bold; }
   .blocfonc .decouvrez {
     font-weight: lighter; }
 
@@ -92,7 +225,9 @@ footer {
   height: 440px;
   display: flex;
   flex-flow: column;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  align-items: center;
+  background: #fff; }
 
 .modeemploi {
   display: flex;
@@ -146,7 +281,39 @@ nav {
     font-weight: bold; }
   .blocdesc i {
     scale: 1.5; }
-  .blocdesc .fas.fa-heart {
+  .blocdesc .like .fas.fa-heart {
     display: none; }
+
+.modeemploi {
+  width: 322px;
+  height: 72px;
+  background: #f6f6f6;
+  box-shadow: 2px 2px 4px #e6e6e6;
+  border-radius: 1rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative; }
+  .modeemploi:last-of-type {
+    background: #f4edfe; }
+  .modeemploi .fa-mobile-alt,
+  .modeemploi .fa-list {
+    color: grey; }
+  .modeemploi .fa-store {
+    color: #9356dc; }
+  .modeemploi .numero {
+    position: absolute;
+    top: calc(50%-1.5rem);
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.5rem;
+    height: 1.5rem;
+    background: #9356dc;
+    color: #fff;
+    border-radius: 50%;
+    margin-left: -1rem; }
 
 /*# sourceMappingURL=style.css.map */
