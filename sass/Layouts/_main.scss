@@ -1,5 +1,3 @@
-@import "../libs/header.scss";
-@import "../libs/footer.scss";
 .imgboxresto {
   max-width: 100%;
   height: 256px;
@@ -27,16 +25,6 @@
     padding-left: 1rem;
     font-family: "shrikhand", sans-serif;
     font-size: 1.8rem;
-  }
-  .like {
-    position: absolute;
-    width: 22px;
-    height: 22px;
-    right: 37px;
-    scale: 1.5;
-    .fas.fa-heart {
-      display: none;
-    }
   }
 }
 .resto {
@@ -66,8 +54,9 @@
   justify-content: space-between;
   align-items: flex-end;
   border-radius: 12px;
-  box-shadow: 2px 2px 4px #e6e6e6;
+  box-shadow: 0 2px 4px 2px#e6e6e6;
   padding: 1rem;
+
   .check {
     display: none;
   }
@@ -77,6 +66,8 @@
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-evenly;
+  white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
   .nomplat {
     font-size: 1.2rem;

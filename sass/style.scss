@@ -1,17 +1,16 @@
-@import "./libs/reset.css";
-/*@import "./libs/responsive.scss";
-@import "./libs/mixins.scss";*/
-@import "./libs/functions.scss";
-@import "./libs/header.scss";
-@import "./libs/footer.scss";
-@import "./libs/button.scss";
-@import "./libs/main.scss";
-$primary: #9356dc;
-$secondary: #ff79da;
-$tertiary: #92e2d0;
+@import "./Vendor/reset.css";
+@import "./Base/base";
+@import "./Themes/responsive";
+@import "./Utils/mixins";
+@import "./Utils/functions";
+@import "./Utils/variables";
+@import "./Layouts/header";
+@import "./Layouts/footer";
+@import "./Layouts/main";
+@import "./Components/button";
 
 .locate {
-  background: #eaeaea;
+  background-color: #eaeaea;
   height: 50px;
   display: flex;
   justify-content: center;

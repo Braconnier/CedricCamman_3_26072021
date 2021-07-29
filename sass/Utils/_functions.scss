@@ -1,0 +1,17 @@
+
+
+@function strip-unit($number) {                                 //
+  @if type-of($number) == "number" and not unitless($number) {  //    Nombres sans unité
+    @return $number / ($number * 0 + 1);                        //
+  }                                                             //
+                                                                //
+  @return $number;                                              //
+}                                                               //
+
+@function rem($size, $base: $base-font-size) {                  //
+  @return 1rem * $Size/strip-unit($base);                       //    Conversion px rem
+}                                                               //
+
+@function em($size, $base: $base-font-size) {                   //
+  @return 1em * $Size/strip-unit($base);                        //    conversion px em
+}                                                               //
