@@ -1,85 +1,87 @@
-.imgboxresto {
+.restaurant {
   max-width: 100%;
-  height: 256px;
-  position: relative;
-}
-.imgboxresto > img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-.titre {
-  display: flex;
-  flex-flow: row nowrap;
+  @include flexcolumn;
   justify-content: space-between;
+  align-items: start;
+  gap: 2rem;
+  &__carte {
+    @include flexcolumn;
+    gap: 1rem;
+    padding:1rem;
+    h3{
+      font-size: 1.2rem;
+      font-weight: lighter;
+      text-transform: uppercase;
+    }
+    &__trait {
+      @include trait
+    }
+  }
+  .button {
+    margin:auto;
+    @include flexrow;
+    justify-content: center;
+  }
+  
+}
+.restaurant--imagebox {
+ @include boite-a-images($imgheight:256px);
+ 
+ 
+}
+.restaurant__titre {
+  @include flexrow;
+  justify-content: space-evenly;
   align-items: center;
   padding-bottom: 2rem;
   margin-top: -4rem;
-  background: #f6f6f6;
+  background: $bg;
   position: relative;
   width: 100%;
   height: 80px;
-  border-radius: 2rem;
-  h1 {
-    padding-left: 1rem;
-    font-family: "shrikhand", sans-serif;
-    font-size: 1.8rem;
-  }
+  @include topradius(2rem);
+    h1 {
+      padding-left: 1rem;
+      font-family: $font-primary;
+      font-size: 1.8rem;
+    }
+    i{
+      scale:1.5;
+    }
 }
-.resto {
-  max-width: 100%;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: space-between;
-  align-items: start;
-  gap: 1rem;
-}
-.trait {
-  width: 40px;
-  height: 3px;
-  background: #92e2d0;
-}
-.carte {
-  display: flex;
-  flex-flow: column wrap;
-  gap: 1rem;
-  padding: 1rem;
-}
-.card {
-  max-width: 350px;
+.restaurant__fiche {
+  width: 350px;
   height: 68px;
-  display: flex;
-  flex-flow: row nowrap;
+  @include flexrow;
   justify-content: space-between;
   align-items: flex-end;
   border-radius: 12px;
-  box-shadow: 0 2px 4px 2px#e6e6e6;
-  padding: 1rem;
-
-  .check {
+  padding: 0.5rem;
+  @include shadow($shadow:$bg-shadow);
+  &__check {
     display: none;
   }
-}
-.plat {
-  height: 100%;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-evenly;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  .nomplat {
-    font-size: 1.2rem;
-    font-weight: bold;
+  &__plat {
+    height: 100%;
+    @include flexcolumn;
+    justify-content: space-evenly;
+    
+    &__nomplat {
+      font-size: 1.1rem;
+     font-weight: 500;
+      white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+    &__description{
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-weight: lighter;
+    }
   }
-}
-.tarif {
-  padding-bottom: 0.5rem;
-  font-weight: bold;
-}
-.btncommand {
-  width: 100%;
-  justify-content: center;
-  display: flex;
+  &__tarif {
+    padding-bottom: 0.5rem;
+    font-weight: 500;
+  }
 }

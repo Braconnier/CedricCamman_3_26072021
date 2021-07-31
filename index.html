@@ -4,16 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/072d97feca.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/072d97feca.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&family=Shrikhand&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&family=Shrikhand&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="./css/style.css" />
     <title>Ohmyfood</title>
   </head>
@@ -21,124 +15,120 @@
     <header>
       <h1>ohmyfood</h1>
     </header>
-    <div class="locate">
+    <div class="localiser">
       <i class="fas fa-map-marker-alt"></i>
       <p>Paris, Belleville</p>
     </div>
-    <div class="blocfonc">
-      <p class="reservez">Réservez le menu qui vous convient</p>
-
-      <p class="decouvrez">
-        Découvrez des restaurants d'exception, séléctionnés par nos soins.
-      </p>
-
-      <a class="button" href="#restaurants">Explorer nos restaurants</a>
+    <div class="conteneur-fonctionnement">
+      <p class="conteneur-fonctionnement--reservez">Réservez le menu qui vous convient</p>
+      <p class="conteneur-fonctionnement--decouvrez">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+      <a class="conteneur-fonctionnement--button button" href="#restaurants">Explorer nos restaurants</a>
     </div>
     <div class="fonctionnement">
-      <div class="modeemploi">
-        <p class="numero">1</p>
-        <i class="fas fa-mobile-alt"></i>
-        <p class="foncdesc">Choisissez un restaurant</p>
+      <div class="fonctionnement__etape">
+        <p class="fonctionnement__etape--numero">1</p>
+        <i class=" fonctionnement__etape--icone fas fa-mobile-alt"></i>
+        <p class="fonctionnement__etape--description">Choisissez un restaurant</p>
       </div>
-      <div class="modeemploi">
-        <p class="numero">2</p>
-        <i class="fas fa-list"></i>
-        <p class="foncdesc">Composez votre menu</p>
+      <div class="fonctionnement__etape">
+        <p class="fonctionnement__etape--numero">2</p>
+        <i class=" fonctionnement__etape--icone fas fa-list"></i>
+        <p class="fonctionnement__etape--description">Composez votre menu</p>
       </div>
-      <div class="modeemploi">
-        <p class="numero">3</p>
-        <i class="fas fa-store"></i>
-        <p class="foncdesc">Dégustez au restaurant</p>
+      <div class="fonctionnement__etape">
+        <p class="fonctionnement__etape--numero">3</p>
+        <i class="fonctionnement__etape--icone fas fa-store "></i>
+        <p class="fonctionnement__etape--description">Dégustez au restaurant</p>
       </div>
     </div>
 
     <nav>
       <h1 id="restaurants">Restaurants</h1>
       <div>
-        <a class="cardresto" href="./sass/Pages/palette.html">
-          <div class="imgbox">
+        <a class="restaurants__carte" href="./sass/Pages/palette.html">
+          <div class="restaurants__carte--imagebox">
             <img src="./img/palette.jpg" alt="La palette du goût" />
             <div class="new">Nouveau</div>
           </div>
-          <div class="blocdesc">
+          <div class="restaurants__carte--description">
             <div>
               <h2>La palette du goût</h2>
               <p>Ménilmontant</p>
             </div>
-            <div class="like">
-              <i class="far fa-heart"></i>
-              <i class="fas fa-heart"></i>
+            <div class="like restaurants__carte__like">
+              <i class="far fa-heart restaurants__carte__like--unchecked"></i>
+              <i class="fas fa-heart restaurants__carte__like--checked"></i>
             </div>
           </div>
         </a>
       </div>
       <div>
-        <a class="cardresto" href="./sass/Pages/note.html">
-          <div class="imgbox">
+        <a class="restaurants__carte" href="./sass/Pages/note.html">
+          <div class="restaurants__carte--imagebox">
             <img src="./img/note.jpg" alt="La note enchantée" />
             <div class="new">Nouveau</div>
           </div>
-          <div class="blocdesc">
+          <div class="restaurants__carte--description">
             <div>
               <h2>La note enchantée</h2>
               <p>Charonne</p>
             </div>
-            <div class="like">
-              <i class="far fa-heart"></i>
-              <i class="fas fa-heart"></i>
+            <div class="restaurants__carte__like">
+              <i class="far fa-heart restaurants__carte__like--unchecked"></i>
+              <i class="fas fa-heart restaurants__carte__like--checked"></i>
             </div>
           </div>
         </a>
       </div>
       <div>
-        <a class="cardresto" href="./sass/Pages/francaise.html">
-          <div class="imgbox">
+        <a class="restaurants__carte" href="./sass/Pages/francaise.html">
+          <div class="restaurants__carte--imagebox">
             <img src="./img/francaise.jpg" alt="À la française" />
           </div>
-          <div class="blocdesc">
+          <div class="restaurants__carte--description">
             <div>
               <h2>À la française</h2>
               <p>Citée Rouge</p>
             </div>
-            <div class="like">
-              <i class="far fa-heart"></i>
-              <i class="fas fa-heart"></i>
+            <div class="like restaurants__carte__like">
+              <i class="far fa-heart restaurants__carte__like--unchecked"></i>
+              <i class="fas fa-heart restaurants__carte__like--checked"></i>
             </div>
           </div>
         </a>
       </div>
       <div>
-        <a class="cardresto" href="./sass/Pages/delice.html">
-          <div class="imgbox">
+        <a class="restaurants__carte" href="./sass/Pages/delice.html">
+          <div class="restaurants__carte--imagebox">
             <img src="./img/delice.jpg" alt="Le délice des sens" />
           </div>
-          <div class="blocdesc">
+          <div class="restaurants__carte--description">
             <div>
               <h2>Le délice des sens</h2>
               <p>Folie-Méricourt</p>
             </div>
-            <div class="like">
-              <i class="far fa-heart"></i>
-              <i class="fas fa-heart"></i>
+            <div class="like restaurants__carte__like">
+              <i class="far fa-heart restaurants__carte__like--unchecked"></i>
+              <i class="fas fa-heart restaurants__carte__like--checked"></i>
             </div>
           </div>
         </a>
       </div>
     </nav>
-    <footer>
-      <a href="#">
+    <footer class="footer">
+      <a class="footer__link"href="#">
         <h1>ohmyfood</h1>
       </a>
-      <a href="" class="proposer">
+      <a class="footer__link"href="">
         <i class="fas fa-utensils"></i>
         <p>Proposer on restaurant</p>
       </a>
-      <a href="" class="partenaire">
+      <a class="footer__link"href="">
         <i class="fas fa-hands-helping"></i>
         <p>Devenir partenaire</p>
       </a>
-      <a href="">Mentions légales</a>
-      <a href="mailto:">Contact</a>
+      <a class="footer__link" href="">Mentions légales</a>
+      <a class="footer__link"href="mailto:">Contact</a>
     </footer>
   </body>
 </html>

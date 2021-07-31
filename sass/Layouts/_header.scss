@@ -1,3 +1,5 @@
+/*    style starts here    */
+
 a {
   text-decoration: none;
   color: #000;
@@ -5,22 +7,22 @@ a {
 html,
 body {
   font-size: $base-font-size;
-  font-family: "roboto", sans-serif;
-  background: #f6f6f6;
+  font-family: $font-secondary;
+  background: $bg;
   max-width: 375px;
   margin: 0 auto;
 }
 header {
   height: 63px;
   color: #000;
-  display: flex;
+  @include flexrow;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 4px 2px#e6e6e6;
   position: relative;
+  @include shadow($shadow:$bg-shadow);
 
   h1 {
-    font-family: "Shrikhand", sans-serif;
+    font-family: $font-primary;
     font-weight: bold;
     font-size: 2rem;
   }
