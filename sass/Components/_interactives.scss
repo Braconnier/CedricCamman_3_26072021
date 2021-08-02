@@ -1,0 +1,24 @@
+.loader {
+  display: none;
+
+}
+.restaurants__carte__like{
+  border:0;
+  background:$bg;
+   &--checked{
+    display: none;
+  }
+} 
+
+main .restaurant__titre__like{
+  border:0;
+  background:$bg;
+  &--checked{
+    display: none;
+  }
+
+}
+  
+.restaurant__fiche__check {
+  display: none;
+}

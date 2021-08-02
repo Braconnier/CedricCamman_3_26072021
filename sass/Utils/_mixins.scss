@@ -36,3 +36,11 @@
      
     }
 }
+@mixin radient{
+background: linear-gradient(
+    0deg,
+    rgba($primary, 1) 0%,
+    rgba($primary, 1) 20%,
+    rgba($secondary, 1) 100%
+  );
+}

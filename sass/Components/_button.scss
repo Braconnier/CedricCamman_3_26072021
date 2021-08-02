@@ -9,12 +9,7 @@
   font-family: $font-secondary;
   background: $primary;
   @include shadow($shadow:$btn-shadow);
-  background: linear-gradient(
-    0deg,
-    rgba($primary, 1) 0%,
-    rgba($primary, 1) 20%,
-    rgba($secondary, 1) 100%
-  );
+  @include radient;
   &:hover {
      filter: opacity(0.7) ;
     

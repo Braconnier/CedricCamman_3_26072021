@@ -21,7 +21,7 @@
             background: lighten($primary,35%);
         }
 
-        &--icone  {
+        &__icone  {
             padding:0 1.5rem 0 2rem;
            
             color: grey;
@@ -30,7 +30,7 @@
             }
         }
         
-        &--numero {
+        &__numero {
             position: absolute;
             top: calc(50%-12px);
             left: 4px;

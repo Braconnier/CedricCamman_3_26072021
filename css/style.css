@@ -248,12 +248,12 @@ header .back {
   padding: 0 2rem;
 }
 
-.conteneur-fonctionnement--reservez {
+.conteneur-fonctionnement__reservez {
   font-size: 1.6rem;
   font-weight: bold;
 }
 
-.conteneur-fonctionnement--decouvrez {
+.conteneur-fonctionnement__decouvrez {
   font-weight: lighter;
 }
 
@@ -302,16 +302,16 @@ header .back {
   background: #f2eafb;
 }
 
-.fonctionnement__etape--icone {
+.fonctionnement__etape__icone {
   padding: 0 1.5rem 0 2rem;
   color: grey;
 }
 
-.fonctionnement__etape--icone.fas.fa-store {
+.fonctionnement__etape__icone.fas.fa-store {
   color: #9356dc;
 }
 
-.fonctionnement__etape--numero {
+.fonctionnement__etape__numero {
   position: absolute;
   top: calc(50%-12px);
   left: 4px;
@@ -369,13 +369,13 @@ nav h1 {
           box-shadow: 0 3px 10px 0px #dddddd;
 }
 
-.restaurants__carte--imagebox {
+.restaurants__carte__imagebox {
   max-width: 100%;
   height: 174px;
   position: relative;
 }
 
-.restaurants__carte--imagebox > img {
+.restaurants__carte__imagebox > img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
@@ -383,12 +383,12 @@ nav h1 {
   position: absolute;
 }
 
-.restaurants__carte--imagebox > img {
+.restaurants__carte__imagebox > img {
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
 }
 
-.restaurants__carte--description {
+.restaurants__carte__description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -405,17 +405,17 @@ nav h1 {
   padding: 1rem;
 }
 
-.restaurants__carte--description h2 {
+.restaurants__carte__description h2 {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
   font-weight: 500;
 }
 
-.restaurants__carte--description i {
+.restaurants__carte__description i {
   scale: 1.5;
 }
 
-.restaurants__carte--description p {
+.restaurants__carte__description p {
   font-weight: lighter;
 }
 
@@ -488,13 +488,13 @@ nav h1 {
           justify-content: center;
 }
 
-.restaurant--imagebox {
+.restaurant__imagebox {
   max-width: 100%;
   height: 256px;
   position: relative;
 }
 
-.restaurant--imagebox > img {
+.restaurant__imagebox > img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
@@ -556,10 +556,6 @@ nav h1 {
   padding: 0.5rem;
   -webkit-box-shadow: 0 3px 10px 0px #dddddd;
           box-shadow: 0 3px 10px 0px #dddddd;
-}
-
-.restaurant__fiche__check {
-  display: none;
 }
 
 .restaurant__fiche__plat {
@@ -672,11 +668,29 @@ nav h1 {
           filter: opacity(0.7);
 }
 
+.loader {
+  display: none;
+}
+
+.restaurants__carte__like {
+  border: 0;
+  background: #f6f6f6;
+}
+
 .restaurants__carte__like--checked {
   display: none;
 }
 
-main .restaurant__titre--like--checked {
+main .restaurant__titre__like {
+  border: 0;
+  background: #f6f6f6;
+}
+
+main .restaurant__titre__like--checked {
+  display: none;
+}
+
+.restaurant__fiche__check {
   display: none;
 }
 /*# sourceMappingURL=style.css.map */

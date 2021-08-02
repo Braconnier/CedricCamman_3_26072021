@@ -15,13 +15,13 @@ nav {
     border-radius: 1rem;
     @include shadow($shadow:$bg-shadow);
   
-  &--imagebox {
+  &__imagebox {
     @include boite-a-images($imgheight:174px);
     &> img {
       @include topradius(1rem);
     }
   }
-  &--description {
+  &__description {
     @include flexrow;
     justify-content: space-between;
     align-items: start;

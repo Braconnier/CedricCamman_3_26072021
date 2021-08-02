@@ -24,7 +24,7 @@
   }
   
 }
-.restaurant--imagebox {
+.restaurant__imagebox {
  @include boite-a-images($imgheight:256px);
  
  
@@ -58,10 +58,7 @@
   border-radius: 12px;
   padding: 0.5rem;
   @include shadow($shadow:$bg-shadow);
-  &__check {
-    display: none;
-  }
-  &__plat {
+    &__plat {
     height: 100%;
     @include flexcolumn;
     justify-content: space-evenly;
