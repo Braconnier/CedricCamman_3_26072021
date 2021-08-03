@@ -1,5 +1,7 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 .button {
-  width:$btn-width;
+  width: $btn-width;
   height: $btn-height;
   @include flexcolumn;
   justify-content: center;
@@ -8,10 +10,9 @@
   color: #fff;
   font-family: $font-secondary;
   background: $primary;
-  @include shadow($shadow:$btn-shadow);
+  @include shadow($shadow: $btn-shadow);
   @include radient;
   &:hover {
-     filter: opacity(0.7) ;
-    
+    filter: opacity(0.7);
   }
 }

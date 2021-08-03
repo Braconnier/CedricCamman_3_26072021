@@ -1,48 +1,49 @@
-.fonctionnement {
-    height: 440px;
-    @include flexcolumn;
-    justify-content: space-evenly;
-    align-items: center;
-    background: #fff;
-  
-  
-    &__etape {
-        width: 322px;
-        height: 72px;
-        background: $bg;
-        @include shadow($shadow:$bg-shadow);
-        border-radius: 1.5rem;
-        @include flexrow;
-   
-        justify-content: start;
-        align-items: center;
-        position: relative;
-        &:last-of-type {
-            background: lighten($primary,35%);
-        }
+@use "../abstracts" as *;
 
-        &__icone  {
-            padding:0 1.5rem 0 2rem;
-           
-            color: grey;
-            &.fas.fa-store {
-                color: $primary;
-            }
-        }
-        
-        &__numero {
-            position: absolute;
-            top: calc(50%-12px);
-            left: 4px;
-            @include flexrow;
-            align-items: center;
-            justify-content: center;
-            min-width: 1.5rem;
-            height: 1.5rem;
-            background: $primary;
-            color: #fff;
-            border-radius: 50%;
-            margin-left: -1rem;
-        }
-    } 
+.fonctionnement {
+  height: 440px;
+  @include flexcolumn;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #fff;
+
+  &__etape {
+    width: 322px;
+    height: 72px;
+    background: $bg;
+    @include shadow($shadow: $bg-shadow);
+    border-radius: 1.5rem;
+    @include flexrow;
+
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    &:last-of-type {
+      background: lighten($primary, 35%);
+    }
+
+    &__icone {
+      padding: 0 1.5rem 0 2rem;
+
+      color: grey;
+      &.fas.fa-store {
+        color: $primary;
+      }
+    }
+
+    &__numero {
+      position: absolute;
+      top: calc(50%-12px);
+      left: 4px;
+      @include flexrow;
+      align-items: center;
+      justify-content: center;
+      min-width: 1.5rem;
+      height: 1.5rem;
+      background: $primary;
+      color: #fff;
+      border-radius: 50%;
+      margin-left: -1rem;
+    }
+  }
 }

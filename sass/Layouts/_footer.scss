@@ -1,3 +1,5 @@
+@use "../abstracts" as *;
+
 .footer {
   margin-top: 3rem;
   min-height: 198px;
@@ -8,11 +10,11 @@
   &__link {
     color: #fff;
     @include flexrow;
-    justify-content: start;
-    i  {
-    scale: 0.75;
-    padding-right: 0.5rem;
-    align-self: center;
+    justify-content: flex-start;
+    i {
+      scale: 0.75;
+      padding-right: 0.5rem;
+      align-self: center;
     }
   }
   h1 {

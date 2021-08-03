@@ -1,12 +1,13 @@
+@use "../abstracts" as *;
 .localiser {
-    background-color: #EAEAEA;
-    height: 50px;
-    @include flexrow;
-    justify-content: center;
-    align-items: center;
-  
-    i {
-      margin-right: 1rem;
-      margin-left: -1rem;
-    }
+  background-color: #eaeaea;
+  height: 50px;
+  @include flexrow;
+  justify-content: center;
+  align-items: center;
+
+  i {
+    margin-right: 1rem;
+    margin-left: -1rem;
   }
+}

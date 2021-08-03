@@ -1,5 +1,5 @@
 /*    style starts here    */
-
+@use "../abstracts" as *;
 a {
   text-decoration: none;
   color: #000;
@@ -19,7 +19,7 @@ header {
   align-items: center;
   justify-content: center;
   position: relative;
-  @include shadow($shadow:$bg-shadow);
+  @include shadow($shadow: $bg-shadow);
 
   h1 {
     font-family: $font-primary;

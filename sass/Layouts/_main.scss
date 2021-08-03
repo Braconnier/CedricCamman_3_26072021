@@ -1,33 +1,33 @@
+@use "../abstracts" as *;
+
+@use "../components" as *;
 .restaurant {
   max-width: 100%;
   @include flexcolumn;
   justify-content: space-between;
-  align-items: start;
+  align-items: flex-start;
   gap: 2rem;
   &__carte {
     @include flexcolumn;
     gap: 1rem;
-    padding:1rem;
-    h3{
+    padding: 1rem;
+    h3 {
       font-size: 1.2rem;
       font-weight: lighter;
       text-transform: uppercase;
     }
     &__trait {
-      @include trait
+      @include trait;
     }
   }
   .button {
-    margin:auto;
+    margin: auto;
     @include flexrow;
     justify-content: center;
   }
-  
 }
 .restaurant__imagebox {
- @include boite-a-images($imgheight:256px);
- 
- 
+  @include boite-a-images($imgheight: 256px);
 }
 .restaurant__titre {
   @include flexrow;
@@ -40,14 +40,14 @@
   width: 100%;
   height: 80px;
   @include topradius(2rem);
-    h1 {
-      padding-left: 1rem;
-      font-family: $font-primary;
-      font-size: 1.8rem;
-    }
-    i{
-      scale:1.5;
-    }
+  h1 {
+    padding-left: 1rem;
+    font-family: $font-primary;
+    font-size: 1.8rem;
+  }
+  i {
+    scale: 1.5;
+  }
 }
 .restaurant__fiche {
   width: 350px;
@@ -57,20 +57,20 @@
   align-items: flex-end;
   border-radius: 12px;
   padding: 0.5rem;
-  @include shadow($shadow:$bg-shadow);
-    &__plat {
+  @include shadow($shadow: $bg-shadow);
+  &__plat {
     height: 100%;
     @include flexcolumn;
     justify-content: space-evenly;
-    
+
     &__nomplat {
       font-size: 1.1rem;
-     font-weight: 500;
+      font-weight: 500;
       white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
-    &__description{
+    &__description {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;

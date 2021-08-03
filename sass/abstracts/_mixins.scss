@@ -1,43 +1,44 @@
-@mixin shadow ($shadow){
-    box-shadow: 0 3px 10px 0px $shadow;
+@use "variables" as *;
+
+@mixin shadow($shadow) {
+  box-shadow: 0 3px 10px 0px $shadow;
 }
 @mixin trait {
-    width: 40px;
-    height: 3px;
-    background: $tertiary;
+  width: 40px;
+  height: 3px;
+  background: $tertiary;
 }
-@mixin flexrow{
-    display: flex;
-    flex-flow: row nowrap;
-}
-
-@mixin flexcolumn{
-    display: flex;
-    flex-flow: column nowrap;
-}
-@mixin topradius ($topradius){
-    border-top-left-radius: $topradius;
-    border-top-right-radius: $topradius;
-}
-@mixin bottomradius ($bottomradius){
-    border-bottom-left-radius: $bottomradius;
-    border-bottom-right-radius:$bottomradius ;
+@mixin flexrow {
+  display: flex;
+  flex-flow: row nowrap;
 }
 
-@mixin boite-a-images($imgheight){
-    max-width: 100%;
-    height: $imgheight;
-    position: relative;
-    &> img {
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-     
-    }
+@mixin flexcolumn {
+  display: flex;
+  flex-flow: column nowrap;
 }
-@mixin radient{
-background: linear-gradient(
+@mixin topradius($topradius) {
+  border-top-left-radius: $topradius;
+  border-top-right-radius: $topradius;
+}
+@mixin bottomradius($bottomradius) {
+  border-bottom-left-radius: $bottomradius;
+  border-bottom-right-radius: $bottomradius;
+}
+
+@mixin boite-a-images($imgheight) {
+  max-width: 100%;
+  height: $imgheight;
+  position: relative;
+  & > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+}
+@mixin radient {
+  background: linear-gradient(
     0deg,
     rgba($primary, 1) 0%,
     rgba($primary, 1) 20%,

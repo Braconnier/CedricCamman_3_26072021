@@ -1,21 +1,6 @@
-@import "./Vendor/reset";
-@import "./Utils/mixins";
-@import "./Utils/functions";
-@import "./Utils/variables";
-@import "./Base/base";
-@import "./Themes/responsive";
-@import "./Layouts/header";
-@import "./Layouts/localiser";
-@import "./Layouts/conteneur-fonctionnement";
-@import "./Layouts/fonctionement";
-@import "./Layouts/restaurants";
-@import "./Layouts/main";
-@import "./Layouts/footer";
-@import "./Components/button";
-@import "./Components/interactives";
-
-
-
-
-
-
+@use "./abstracts" as *;
+@use "./vendor" as *;
+@use "./base" as *;
+@use "./themes" as *;
+@use "./layouts" as *;
+@use "./components" as *;
