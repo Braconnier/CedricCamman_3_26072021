@@ -293,21 +293,86 @@ header .back {
 .restaurants__carte__like {
   border: 0;
   background: #f6f6f6;
+  padding-right: 1rem;
+  position: relative;
+}
+.restaurants__carte__like--unchecked {
+  position: absolute;
+  opacity: 1;
 }
 .restaurants__carte__like--checked {
-  display: none;
+  position: absolute;
+  opacity: 0;
+}
+.restaurants__carte__like:hover .restaurants__carte__like--unchecked {
+  opacity: 0;
+}
+.restaurants__carte__like:hover .restaurants__carte__like--checked {
+  opacity: 1;
+}
+.restaurants__carte__like:hover .restaurants__carte__like--checked::before {
+  background: linear-gradient(0deg, #9356dc 0%, #9356dc 20%, #ff79da 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-main .restaurant__titre__like {
+.restaurant__titre__like {
   border: 0;
   background: #f6f6f6;
+  padding: 0 1rem 1rem 0;
+  position: relative;
 }
-main .restaurant__titre__like--checked {
-  display: none;
+.restaurant__titre__like--unchecked {
+  position: absolute;
+  opacity: 1;
+}
+.restaurant__titre__like--checked {
+  position: absolute;
+  opacity: 0;
+}
+.restaurant__titre__like:hover .restaurant__titre__like--unchecked {
+  opacity: 0;
+}
+.restaurant__titre__like:hover .restaurant__titre__like--checked {
+  opacity: 1;
+}
+.restaurant__titre__like:hover .restaurant__titre__like--checked::before {
+  background: linear-gradient(0deg, #9356dc 0%, #9356dc 20%, #ff79da 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
+.restaurant__fiche {
+  position: relative;
+}
 .restaurant__fiche__check {
   display: none;
+}
+.restaurant__fiche:hover {
+  position: relative;
+}
+.restaurant__fiche:hover .restaurant__fiche__check {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  width: 4rem;
+  height: 68px;
+  background: #92e2d0;
+  color: white;
+}
+.restaurant__fiche:hover .restaurant__fiche__check::before {
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.restaurant__fiche:hover .restaurant__fiche__tarif {
+  padding-right: 4rem;
 }
 
 nav {
@@ -455,27 +520,36 @@ nav h1 {
   border-radius: 12px;
   padding: 0.5rem;
   box-shadow: 0 3px 10px 0px #dddddd;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .restaurant__fiche__plat {
   height: 100%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-evenly;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .restaurant__fiche__plat__nomplat {
   font-size: 1.1rem;
+  height: 40%;
   font-weight: 500;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .restaurant__fiche__plat__description {
+  height: 40%;
+  font-weight: lighter;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-weight: lighter;
 }
 .restaurant__fiche__tarif {
+  min-width: 2rem;
   padding-bottom: 0.5rem;
   font-weight: 500;
 }

@@ -5,19 +5,89 @@
 .restaurants__carte__like {
   border: 0;
   background: $bg;
-  &--checked {
-    display: none;
+  padding-right: 1rem;
+  position: relative;
+    &--unchecked{
+      position: absolute;
+      opacity: 1;
+    }
+    &--checked{
+      position: absolute;
+      opacity: 0;
+    }
+    &:hover{
+      .restaurants__carte__like--unchecked{
+        opacity: 0;
+      }
+      .restaurants__carte__like--checked{ 
+        opacity: 1;
+          &::before{
+          @include radient;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          }
+    }
   }
+    
 }
+      
 
-main .restaurant__titre__like {
+.restaurant__titre__like {
   border: 0;
   background: $bg;
-  &--checked {
-    display: none;
+  padding:0 1rem 1rem 0 ;
+  position: relative;
+  &--unchecked{
+    position: absolute;
+    opacity: 1;
+  }
+  &--checked{
+    position: absolute;
+    opacity: 0;
+  }
+  &:hover{
+    .restaurant__titre__like--unchecked{
+      opacity: 0;
+    }
+    .restaurant__titre__like--checked{ 
+      opacity: 1;
+        &::before{
+        @include radient;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        }
   }
 }
+  
+}
 
-.restaurant__fiche__check {
-  display: none;
+.restaurant__fiche {
+  position:relative;
+    &__check {
+      
+      display: none;
+    }
+    &:hover {
+      position:relative;
+      .restaurant__fiche__check{
+      position:absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+        width:4rem;
+        height:68px;
+        background: $tertiary;
+        color:white;
+        &::before{
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          }
+      }
+      .restaurant__fiche__tarif{
+        padding-right: 4rem;
+      }
+    }
 }

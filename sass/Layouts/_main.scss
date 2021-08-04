@@ -1,5 +1,4 @@
 @use "../abstracts" as *;
-
 @use "../components" as *;
 .restaurant {
   max-width: 100%;
@@ -58,27 +57,37 @@
   border-radius: 12px;
   padding: 0.5rem;
   @include shadow($shadow: $bg-shadow);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   &__plat {
     height: 100%;
     @include flexcolumn;
     justify-content: space-evenly;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     &__nomplat {
       font-size: 1.1rem;
+      height:40%;
       font-weight: 500;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
     &__description {
+      height:40%;
+      font-weight: lighter;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      font-weight: lighter;
     }
   }
   &__tarif {
+    min-width: 2rem;
     padding-bottom: 0.5rem;
     font-weight: 500;
   }
+  
 }
