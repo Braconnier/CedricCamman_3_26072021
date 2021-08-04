@@ -1,17 +1,18 @@
+
+/*    style starts here    */
 @use "../abstracts" as *;
+*{
+  box-sizing: border-box;
+}
 a {
   text-decoration: none;
   color: #000;
 }
-* {
-  box-sizing: border-box;
-}
 html,
 body {
-  max-width: 375px;
-  width: 100%;
   font-size: $base-font-size;
-  font-family: $font-primary;
+  font-family: $font-secondary;
   background: $bg;
+  max-width: 375px;
   margin: 0 auto;
 }

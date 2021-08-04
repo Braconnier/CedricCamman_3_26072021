@@ -1,17 +1,6 @@
-/*    style starts here    */
 @use "../abstracts" as *;
-a {
-  text-decoration: none;
-  color: #000;
-}
-html,
-body {
-  font-size: $base-font-size;
-  font-family: $font-secondary;
-  background: $bg;
-  max-width: 375px;
-  margin: 0 auto;
-}
+@use "../base" as *;
+
 header {
   height: 63px;
   color: #000;

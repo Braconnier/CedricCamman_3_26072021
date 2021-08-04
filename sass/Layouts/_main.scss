@@ -70,14 +70,14 @@
 
     &__nomplat {
       font-size: 1.1rem;
-      height:40%;
+      height: 40%;
       font-weight: 500;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
     &__description {
-      height:40%;
+      height: 40%;
       font-weight: lighter;
       white-space: nowrap;
       overflow: hidden;
@@ -89,5 +89,4 @@
     padding-bottom: 0.5rem;
     font-weight: 500;
   }
-  
 }

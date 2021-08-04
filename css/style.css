@@ -135,26 +135,12 @@ table {
   border-spacing: 0;
 }
 
-a {
-  text-decoration: none;
-  color: #000;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  max-width: 375px;
-  width: 100%;
-  font-size: 16px;
-  font-family: "shrikhand", sans-serif;
-  background: #f6f6f6;
-  margin: 0 auto;
-}
-
 /*    style starts here    */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 a {
   text-decoration: none;
   color: #000;
@@ -172,12 +158,22 @@ body {
 header {
   height: 63px;
   color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
-  box-shadow: 0 3px 10px 0px #dddddd;
+  -webkit-box-shadow: 0 3px 10px 0px #dddddd;
+          box-shadow: 0 3px 10px 0px #dddddd;
 }
 header h1 {
   font-family: "shrikhand", sans-serif;
@@ -193,10 +189,19 @@ header .back {
 .localiser {
   background-color: #eaeaea;
   height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .localiser i {
   margin-right: 1rem;
@@ -205,10 +210,19 @@ header .back {
 
 .conteneur-fonctionnement {
   height: 286px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-evenly;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .conteneur-fonctionnement p {
   text-align: center;
@@ -224,22 +238,41 @@ header .back {
 
 .fonctionnement {
   height: 440px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-evenly;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #fff;
 }
 .fonctionnement__etape {
   width: 322px;
   height: 72px;
   background: #f6f6f6;
-  box-shadow: 0 3px 10px 0px #dddddd;
+  -webkit-box-shadow: 0 3px 10px 0px #dddddd;
+          box-shadow: 0 3px 10px 0px #dddddd;
   border-radius: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
 }
 .fonctionnement__etape:last-of-type {
@@ -256,10 +289,19 @@ header .back {
   position: absolute;
   top: calc(50%-12px);
   left: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   min-width: 1.5rem;
   height: 1.5rem;
   background: #9356dc;
@@ -271,19 +313,31 @@ header .back {
 .button {
   width: 218px;
   height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-radius: 25px;
   color: #fff;
   font-family: "roboto", sans-serif;
   background: #9356dc;
-  box-shadow: 0 3px 10px 0px #aaaaaa;
+  -webkit-box-shadow: 0 3px 10px 0px #aaaaaa;
+          box-shadow: 0 3px 10px 0px #aaaaaa;
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), color-stop(20%, #9356dc), to(#ff79da));
   background: linear-gradient(0deg, #9356dc 0%, #9356dc 20%, #ff79da 100%);
 }
 .button:hover {
-  filter: opacity(0.7);
+  -webkit-filter: opacity(0.7);
+          filter: opacity(0.7);
 }
 
 .loader {
@@ -311,6 +365,7 @@ header .back {
   opacity: 1;
 }
 .restaurants__carte__like:hover .restaurants__carte__like--checked::before {
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), color-stop(20%, #9356dc), to(#ff79da));
   background: linear-gradient(0deg, #9356dc 0%, #9356dc 20%, #ff79da 100%);
   -webkit-background-clip: text;
           background-clip: text;
@@ -338,6 +393,7 @@ header .back {
   opacity: 1;
 }
 .restaurant__titre__like:hover .restaurant__titre__like--checked::before {
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), color-stop(20%, #9356dc), to(#ff79da));
   background: linear-gradient(0deg, #9356dc 0%, #9356dc 20%, #ff79da 100%);
   -webkit-background-clip: text;
           background-clip: text;
@@ -357,9 +413,15 @@ header .back {
   position: absolute;
   top: 0;
   right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 1.2rem;
   width: 4rem;
   height: 68px;
@@ -376,8 +438,13 @@ header .back {
 }
 
 nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   gap: 1rem;
   padding: 1rem;
 }
@@ -390,10 +457,16 @@ nav h1 {
 .restaurants__carte {
   max-width: 100%;
   height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   border-radius: 1rem;
-  box-shadow: 0 3px 10px 0px #dddddd;
+  -webkit-box-shadow: 0 3px 10px 0px #dddddd;
+          box-shadow: 0 3px 10px 0px #dddddd;
 }
 .restaurants__carte__imagebox {
   max-width: 100%;
@@ -412,10 +485,19 @@ nav h1 {
   border-top-right-radius: 1rem;
 }
 .restaurants__carte__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   padding: 1rem;
 }
 .restaurants__carte__description h2 {
@@ -445,15 +527,29 @@ nav h1 {
 
 .restaurant {
   max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   gap: 2rem;
 }
 .restaurant__carte {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   gap: 1rem;
   padding: 1rem;
 }
@@ -469,9 +565,16 @@ nav h1 {
 }
 .restaurant .button {
   margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .restaurant__imagebox {
@@ -488,10 +591,19 @@ nav h1 {
 }
 
 .restaurant__titre {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-evenly;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-bottom: 2rem;
   margin-top: -4rem;
   background: #f6f6f6;
@@ -513,22 +625,39 @@ nav h1 {
 .restaurant__fiche {
   width: 350px;
   height: 68px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: flex-end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   border-radius: 12px;
   padding: 0.5rem;
-  box-shadow: 0 3px 10px 0px #dddddd;
+  -webkit-box-shadow: 0 3px 10px 0px #dddddd;
+          box-shadow: 0 3px 10px 0px #dddddd;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .restaurant__fiche__plat {
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -558,21 +687,35 @@ nav h1 {
   margin-top: 3rem;
   min-height: 198px;
   background: #353535;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   padding: 1rem;
 }
 .footer__link {
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 .footer__link i {
   scale: 0.75;
   padding-right: 0.5rem;
-  align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 .footer h1 {
   margin: 0;
