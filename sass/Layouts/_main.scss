@@ -1,15 +1,16 @@
 @use "../abstracts" as *;
 @use "../components" as *;
+@use "../themes" as *;
 .restaurant {
   max-width: 100%;
   @include flexcolumn;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   gap: 2rem;
   &__carte {
     @include flexcolumn;
     gap: 1rem;
-    padding: 1rem;
+    padding: 0.5rem;
     h3 {
       font-size: 1.2rem;
       font-weight: lighter;
@@ -43,6 +44,9 @@
     padding-left: 1rem;
     font-family: $font-primary;
     font-size: 1.8rem;
+    @media #{$small-down} {
+      font-size: 1.5rem;
+    }
   }
   i {
     scale: 1.5;
@@ -60,13 +64,12 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  @media #{$small-down} {
+    width: 290px;
+  }
   &__plat {
     height: 100%;
     @include flexcolumn;
-    justify-content: space-evenly;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 
     &__nomplat {
       font-size: 1.1rem;

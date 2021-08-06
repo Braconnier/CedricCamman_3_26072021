@@ -38,6 +38,7 @@
   &--unchecked {
     position: absolute;
     opacity: 1;
+    transition: all ease-in-out 600ms;
   }
   &--checked {
     position: absolute;
@@ -49,6 +50,7 @@
     }
     .restaurant__titre__like--checked {
       opacity: 1;
+      transition: all ease-in-out 600ms;
       &::before {
         @include radient;
         background-clip: text;
@@ -66,6 +68,7 @@
   &:hover {
     position: relative;
     .restaurant__fiche__check {
+      animation: check-translate 1s;
       position: absolute;
       top: 0;
       right: 0;
@@ -77,13 +80,28 @@
       height: 68px;
       background: $tertiary;
       color: white;
+
       &::before {
         background-clip: text;
         -webkit-text-fill-color: transparent;
       }
     }
     .restaurant__fiche__tarif {
-      padding-right: 4rem;
+      transition: transform 1s;
+      transform: translateX(-4rem);
     }
+    .restaurant__fiche__plat__description {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+@keyframes check-translate {
+  from {
+    right: -4rem;
+  }
+  to {
+    right: 0;
   }
 }

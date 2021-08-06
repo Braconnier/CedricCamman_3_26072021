@@ -309,11 +309,6 @@ header .back {
   border-radius: 50%;
   margin-left: -1rem;
 }
-@media only screen and (max-width:365px) {
-  .fonctionnement__etape {
-    width: 285px;
-  }
-}
 
 .button {
   width: 218px;
@@ -386,8 +381,6 @@ header .back {
 .restaurant__titre__like--unchecked {
   position: absolute;
   opacity: 1;
-  -webkit-transition: all ease-in-out 600ms;
-  transition: all ease-in-out 600ms;
 }
 .restaurant__titre__like--checked {
   position: absolute;
@@ -398,8 +391,6 @@ header .back {
 }
 .restaurant__titre__like:hover .restaurant__titre__like--checked {
   opacity: 1;
-  -webkit-transition: all ease-in-out 600ms;
-  transition: all ease-in-out 600ms;
 }
 .restaurant__titre__like:hover .restaurant__titre__like--checked::before {
   background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), color-stop(20%, #9356dc), to(#ff79da));
@@ -419,8 +410,6 @@ header .back {
   position: relative;
 }
 .restaurant__fiche:hover .restaurant__fiche__check {
-  -webkit-animation: check-translate 1s;
-          animation: check-translate 1s;
   position: absolute;
   top: 0;
   right: 0;
@@ -445,36 +434,9 @@ header .back {
   -webkit-text-fill-color: transparent;
 }
 .restaurant__fiche:hover .restaurant__fiche__tarif {
-  -webkit-transition: -webkit-transform 1s;
-  transition: -webkit-transform 1s;
-  transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s;
-  -webkit-transform: translateX(-4rem);
-          transform: translateX(-4rem);
-}
-.restaurant__fiche:hover .restaurant__fiche__plat__description {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  padding-right: 4rem;
 }
 
-@-webkit-keyframes check-translate {
-  from {
-    right: -4rem;
-  }
-  to {
-    right: 0;
-  }
-}
-
-@keyframes check-translate {
-  from {
-    right: -4rem;
-  }
-  to {
-    right: 0;
-  }
-}
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -575,9 +537,9 @@ nav h1 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   gap: 2rem;
 }
 .restaurant__carte {
@@ -589,7 +551,7 @@ nav h1 {
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   gap: 1rem;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 .restaurant__carte h3 {
   font-size: 1.2rem;
@@ -656,11 +618,6 @@ nav h1 {
   font-family: "shrikhand", sans-serif;
   font-size: 1.8rem;
 }
-@media only screen and (max-width:365px) {
-  .restaurant__titre h1 {
-    font-size: 1.5rem;
-  }
-}
 .restaurant__titre i {
   scale: 1.5;
 }
@@ -689,11 +646,6 @@ nav h1 {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-@media only screen and (max-width:365px) {
-  .restaurant__fiche {
-    width: 290px;
-  }
-}
 .restaurant__fiche__plat {
   height: 100%;
   display: -webkit-box;
@@ -703,6 +655,12 @@ nav h1 {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .restaurant__fiche__plat__nomplat {
   font-size: 1.1rem;
