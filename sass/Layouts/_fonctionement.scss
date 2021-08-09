@@ -8,6 +8,12 @@
   align-items: center;
   background: #fff;
 
+  @media #{$medium-up},#{$large-up} {
+    @include flexrow;
+    height: 200px;
+    border-radius: 1rem;
+  }
+
   &__etape {
     width: 322px;
     height: 72px;
@@ -18,6 +24,13 @@
     justify-content: flex-start;
     align-items: center;
     position: relative;
+
+    @media #{$medium-up} {
+      max-width: calc(0.3 *#{$medium});
+    }
+    @media #{$large-up} {
+      max-width: calc(0.3 *#{$large});
+    }
     &:last-of-type {
       background: lighten($primary, 35%);
     }

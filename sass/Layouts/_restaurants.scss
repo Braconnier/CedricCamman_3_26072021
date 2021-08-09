@@ -1,5 +1,7 @@
 @use "../abstracts" as *;
 @use "../components" as *;
+@use "../themes" as *;
+
 nav {
   @include flexcolumn;
   gap: 1rem;
@@ -9,6 +11,25 @@ nav {
     font-size: 1.5rem;
     font-weight: 500;
   }
+  @media #{$medium-up} {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding: 0;
+    h1 {
+      width: 100%;
+      padding: 1rem;
+    }
+  }
+  @media #{$large-up},#{$medium-up} {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding: 0;
+    h1 {
+      width: 100%;
+    }
+  }
 }
 .restaurants__carte {
   max-width: 100%;
@@ -17,6 +38,12 @@ nav {
   border-radius: 1rem;
   @include shadow($shadow: $bg-shadow);
 
+  @media #{$medium-up} {
+    min-width: calc(0.5 *#{$medium} - #{$base-font-size});
+  }
+  @media #{$large-up} {
+    width: calc(0.5 *#{$large} - #{$base-font-size});
+  }
   &__imagebox {
     @include boite-a-images($imgheight: 174px);
     & > img {

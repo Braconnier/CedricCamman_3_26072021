@@ -1,31 +1,6 @@
 @use "../abstracts" as *;
 @use "../components" as *;
 @use "../themes" as *;
-.restaurant {
-  max-width: 100%;
-  @include flexcolumn;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-  &__carte {
-    @include flexcolumn;
-    gap: 1rem;
-    padding: 0.5rem;
-    h3 {
-      font-size: 1.2rem;
-      font-weight: lighter;
-      text-transform: uppercase;
-    }
-    &__trait {
-      @include trait;
-    }
-  }
-  .button {
-    margin: auto;
-    @include flexrow;
-    justify-content: center;
-  }
-}
 .restaurant__imagebox {
   @include boite-a-images($imgheight: 256px);
 }
@@ -41,55 +16,115 @@
   height: 80px;
   @include topradius(2rem);
   h1 {
-    padding-left: 1rem;
     font-family: $font-primary;
     font-size: 1.8rem;
     @media #{$small-down} {
       font-size: 1.5rem;
     }
+    @media #{$medium-up},#{$large-up} {
+      font-size: 1.8rem;
+      letter-spacing: 0.15rem;
+    }
   }
-  i {
+  &__like {
+    position: absolute;
+    right: 1.5rem;
     scale: 1.5;
+    background: rgba(255, 255, 255, 0);
+  }
+}
+.restaurant {
+  max-width: 100%;
+  @include flexcolumn;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+
+  &__carte {
+    @include flexcolumn;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.5rem;
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+    &__trait {
+      @include trait;
+    }
+
+    @media #{$large-up} {
+      width: 100%;
+    }
+  }
+  .service {
+    width: 100%;
+    @include flexcolumn;
+    gap: 1rem;
+    justify-content: space-between;
+    &:nth-last-child(2) {
+      padding-bottom: 2rem;
+    }
+    @media #{$large-up} {
+      flex-flow: row wrap;
+    }
+  }
+  .button {
+    margin: auto;
+    @include flexrow;
+    justify-content: center;
   }
 }
 .restaurant__fiche {
+  cursor: pointer;
   width: 350px;
   height: 68px;
   @include flexrow;
   justify-content: space-between;
-  align-items: flex-end;
-  border-radius: 12px;
+  border-radius: 1rem;
   padding: 0.5rem;
   @include shadow($shadow: $bg-shadow);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+
   @media #{$small-down} {
-    width: 290px;
+    max-width: 300px;
+  }
+  @media #{$large-up} {
+    width: calc(0.3 *#{$large});
   }
   &__plat {
     height: 100%;
     @include flexcolumn;
+    justify-content: space-around;
 
     &__nomplat {
-      font-size: 1.1rem;
+      font-size: 1rem;
       height: 40%;
       font-weight: 500;
+      @include flexcolumn;
+      justify-content: center;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+
+      @media #{$small-down} {
+        font-size: 1rem;
+      }
     }
     &__description {
       height: 40%;
       font-weight: lighter;
+      @include flexcolumn;
+      justify-content: center;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      font-size: 0.9rem;
     }
   }
   &__tarif {
-    min-width: 2rem;
-    padding-bottom: 0.5rem;
     font-weight: 500;
+    padding-top: 2rem;
   }
 }

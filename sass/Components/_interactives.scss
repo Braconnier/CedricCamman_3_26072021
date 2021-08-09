@@ -1,7 +1,8 @@
 @use "../abstracts/" as *;
 .loader {
-  display: none;
+  opacity: 0;
 }
+
 .restaurants__carte__like {
   border: 0;
   background: $bg;
@@ -38,11 +39,12 @@
   &--unchecked {
     position: absolute;
     opacity: 1;
-    transition: all ease-in-out 600ms;
+    transition: opacity 300ms;
   }
   &--checked {
     position: absolute;
     opacity: 0;
+    transition: opacity 300ms;
   }
   &:hover {
     .restaurant__titre__like--unchecked {
@@ -50,7 +52,6 @@
     }
     .restaurant__titre__like--checked {
       opacity: 1;
-      transition: all ease-in-out 600ms;
       &::before {
         @include radient;
         background-clip: text;
@@ -68,7 +69,8 @@
   &:hover {
     position: relative;
     .restaurant__fiche__check {
-      animation: check-translate 1s;
+      animation: check-scale 1s ease-in-out both;
+      transform-origin: right;
       position: absolute;
       top: 0;
       right: 0;
@@ -80,6 +82,7 @@
       height: 68px;
       background: $tertiary;
       color: white;
+      border-radius: 0 1rem 1rem 0;
 
       &::before {
         background-clip: text;
@@ -87,21 +90,17 @@
       }
     }
     .restaurant__fiche__tarif {
-      transition: transform 1s;
-      transform: translateX(-4rem);
-    }
-    .restaurant__fiche__plat__description {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      animation: all 1s ease-in-out both;
     }
   }
 }
-@keyframes check-translate {
+@keyframes check-scale {
   from {
-    right: -4rem;
+    width: 0;
+    opacity: 0;
   }
   to {
-    right: 0;
+    width: 4rem;
+    opacity: 1;
   }
 }

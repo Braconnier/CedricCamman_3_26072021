@@ -1,7 +1,7 @@
-
 /*    style starts here    */
 @use "../abstracts" as *;
-*{
+@use "../themes" as *;
+* {
   box-sizing: border-box;
 }
 a {
@@ -15,4 +15,13 @@ body {
   background: $bg;
   max-width: 375px;
   margin: 0 auto;
+  @media #{$small-up} {
+    max-width: $medium;
+  }
+  @media #{$medium-up} {
+    max-width: $large;
+  }
+  @media #{$large-up} {
+    max-width: $large;
+  }
 }

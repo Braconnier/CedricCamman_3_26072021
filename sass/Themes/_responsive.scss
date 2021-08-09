@@ -1,9 +1,11 @@
 $small: 365px !default;
 $medium: 768px !default;
-$large: 992px !default;
-$small-up: "only screen and (min-width:#{$small})";
+$large: 1024px !default;
+
 $small-down: "only screen and (max-width:#{$small})";
-$medium-up: "only screen and (min-width:#{$medium})";
-$medium-down: "only screen and (max-width:#{$medium})";
+
+$small-up: "only screen and (min-width:#{$small}) and (max-width:#{$medium})";
+
+$medium-up: "only screen and (min-width:#{$medium}) and (max-width:#{$large})";
+
 $large-up: "only screen and (min-width:#{$large})";
-$large-down: "only screen and (max-width:#{$large})";
