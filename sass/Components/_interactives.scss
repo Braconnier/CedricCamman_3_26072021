@@ -1,35 +1,33 @@
 @use "../abstracts/" as *;
 .loader {
-  height: 100vh;
-  position: relative;
+  width: 0;
+  height: 0;
 }
-.loader::before,
-.loader::after {
+.loader {
   border: 10px solid $primary;
   border-top: 10px solid $primary;
   border-bottom: 10px solid $secondary;
   border-radius: 50%;
   background-color: $bg;
   margin: auto;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
   animation: spin 3s;
 }
 @keyframes spin {
   0% {
+    height: 100vh;
+    width: 100vw;
+    display: inline-block;
     transform: rotate(0deg);
-    width: 100px;
-    height: 100px;
   }
   99% {
-    transform: rotate(360deg);
-    opacity: 0;
   }
   99%,
   100% {
+    height: 100vh;
+    width: 100vw;
+    opacity: 0;
     display: none;
+    transform: rotate(360deg);
   }
 }
 .container {

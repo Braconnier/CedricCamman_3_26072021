@@ -387,57 +387,54 @@ header .back {
 }
 
 .loader {
-  height: 100vh;
-  position: relative;
+  width: 0;
+  height: 0;
 }
 
-.loader::before,
-.loader::after {
+.loader {
   border: 10px solid #9356dc;
   border-top: 10px solid #9356dc;
   border-bottom: 10px solid #ff79da;
   border-radius: 50%;
   background-color: #f6f6f6;
   margin: auto;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
   -webkit-animation: spin 3s;
           animation: spin 3s;
 }
 
 @-webkit-keyframes spin {
   0% {
+    height: 100vh;
+    width: 100vw;
+    display: inline-block;
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
-    width: 100px;
-    height: 100px;
-  }
-  99% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-    opacity: 0;
   }
   99%, 100% {
+    height: 100vh;
+    width: 100vw;
+    opacity: 0;
     display: none;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
 @keyframes spin {
   0% {
+    height: 100vh;
+    width: 100vw;
+    display: inline-block;
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
-    width: 100px;
-    height: 100px;
-  }
-  99% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-    opacity: 0;
   }
   99%, 100% {
+    height: 100vh;
+    width: 100vw;
+    opacity: 0;
     display: none;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 .container {
