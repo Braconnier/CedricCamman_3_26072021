@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Braconnier/CedricCamman_3_26072021/issues"
   },
-  "homepage": "https://github.com/Braconnier/CedricCamman_3_26072021#readme"
+  "homepage": "https://github.com/Braconnier/CedricCamman_3_26072021#readme",
+  "dependencies": {
+    "sass": "^1.37.5"
+  }
 }

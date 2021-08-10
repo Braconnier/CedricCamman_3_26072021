@@ -387,35 +387,93 @@ header .back {
 }
 
 .loader {
-  opacity: 0;
-}
-
-.restaurants__carte__like {
-  border: 0;
-  background: #f6f6f6;
-  padding-right: 1rem;
+  height: 100vh;
   position: relative;
 }
-.restaurants__carte__like--unchecked {
-  position: absolute;
-  opacity: 1;
+
+.loader::before,
+.loader::after {
+  border: 10px solid #9356dc;
+  border-top: 10px solid #9356dc;
+  border-bottom: 10px solid #ff79da;
+  border-radius: 50%;
+  background-color: #f6f6f6;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-animation: spin 3s;
+          animation: spin 3s;
 }
-.restaurants__carte__like--checked {
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    width: 100px;
+    height: 100px;
+  }
+  99% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    opacity: 0;
+  }
+  99%, 100% {
+    display: none;
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    width: 100px;
+    height: 100px;
+  }
+  99% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    opacity: 0;
+  }
+  99%, 100% {
+    display: none;
+  }
+}
+.container {
+  position: relative;
+}
+.container > i.restaurants__carte__like--check {
   position: absolute;
+  bottom: 3rem;
+  right: 2rem;
+  scale: 1.5;
+}
+.container input[type=checkbox] {
+  position: absolute;
+  bottom: 3rem;
+  right: 2rem;
+  scale: 1.5;
+}
+.container input[type=checkbox] .like.restaurants__carte__like--check {
   opacity: 0;
 }
-.restaurants__carte__like:hover .restaurants__carte__like--unchecked {
-  opacity: 0;
-}
-.restaurants__carte__like:hover .restaurants__carte__like--checked {
+.container input[type=checkbox] + label > .like.fa-heart {
   opacity: 1;
 }
-.restaurants__carte__like:hover .restaurants__carte__like--checked::before {
+.container input[type=checkbox] + label > .like.fa-heart::before {
+  content: "";
+  background: #f6f6f6;
+}
+.container input[type=checkbox]:checked + label > .like.fa-heart {
+  opacity: 1;
+}
+.container input[type=checkbox]:checked + label > .like.fa-heart::before {
+  content: "";
   background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), color-stop(20%, #9356dc), to(#ff79da));
   background: linear-gradient(0deg, #9356dc 0%, #9356dc 20%, #ff79da 100%);
   -webkit-background-clip: text;
           background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .restaurant__titre__like {

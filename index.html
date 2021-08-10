@@ -18,7 +18,7 @@
     <title>Ohmyfood</title>
   </head>
   <body>
-    <div class="loader"></div>
+    <div class="loader">Chargement ...</div>
     <header>
       <h1>ohmyfood</h1>
     </header>
@@ -59,7 +59,7 @@
 
     <nav>
       <h1 id="restaurants">Restaurants</h1>
-      <div>
+      <div class="container">
         <a class="restaurants__carte" href="./sass/pages/palette.html">
           <div class="restaurants__carte__imagebox">
             <img src="./img/palette.jpg" alt="La palette du goût" />
@@ -70,12 +70,14 @@
               <h2>La palette du goût</h2>
               <p>Ménilmontant</p>
             </div>
-            <label class="like restaurants__carte__like">
-              <i class="far fa-heart restaurants__carte__like--unchecked"></i>
-              <i class="fas fa-heart restaurants__carte__like--checked"></i>
-            </label>
           </div>
         </a>
+        <input type="checkbox" checked="false" class="like restaurants__carte__like">
+          <label>
+            <i class="far fa-heart restaurants__carte__like--check"></i>
+          </label>
+          <!-- <i class="fas fa-heart restaurants__carte__like--checked"></i> -->
+        </input>
       </div>
       <div>
         <a class="restaurants__carte" href="./sass/pages/note.html">
@@ -88,7 +90,7 @@
               <h2>La note enchantée</h2>
               <p>Charonne</p>
             </div>
-            <label class="restaurants__carte__like">
+            <label class=" like restaurants__carte__like">
               <i class="far fa-heart restaurants__carte__like--unchecked"></i>
               <i class="fas fa-heart restaurants__carte__like--checked"></i>
             </label>
