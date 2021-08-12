@@ -796,6 +796,10 @@ header .back {
   opacity: 0;
 }
 
+.restaurant__fiche:hover {
+  -webkit-box-shadow: 0 3px 10px 0px #919191;
+          box-shadow: 0 3px 10px 0px #919191;
+}
 .restaurant__fiche:hover .restaurant__fiche__plat {
   -webkit-animation: slide 0.5s both;
           animation: slide 0.5s both;

@@ -218,6 +218,8 @@
 }
 ///////////////////////////////   slide des check
 .restaurant__fiche:hover {
+  @include shadow(darken($bg-shadow, 30%));
+
   .restaurant__fiche__plat {
     animation: slide 0.5s both;
   }
