@@ -4,13 +4,13 @@
   position: relative;
   top: 0;
   left: 0;
-  width: 50%;
+  width: 100vw;
   height: 100vh;
   width: 100%;
   animation: fade 0ms 3s forwards;
   .load {
     position: absolute;
-    top: 50%;
+    top: 30%;
     right: 50%;
     display: inline-block;
     padding: 2rem;
@@ -27,7 +27,8 @@
     .load__text {
       position: absolute;
       top: 200%;
-      font-size: 3rem;
+      left: -5vw;
+      font-size: 2rem;
       font-weight: 500;
       text-transform: uppercase;
       background: darken($bg, 30%);
@@ -35,15 +36,7 @@
       -webkit-text-fill-color: transparent;
 
       @media #{$small-down} {
-        font-size: 1rem;
-        right: -25vw;
-      }
-      @media #{$small-up} {
-        font-size: 2rem;
-        right: -15vw;
-      }
-      @media #{$medium-up} {
-        right: -20vw;
+        left: -20vw;
       }
 
       &::after {
