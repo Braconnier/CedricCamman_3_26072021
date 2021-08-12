@@ -139,5 +139,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    & i.fas.fa-check-circle {
+      display: inline-block;
+      font-size: 1.3rem;
+    }
   }
 }

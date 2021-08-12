@@ -386,191 +386,6 @@ header .back {
           filter: opacity(0.7);
 }
 
-.loader {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  width: 100%;
-  -webkit-animation: fade 0ms 3s forwards;
-          animation: fade 0ms 3s forwards;
-}
-.loader .load {
-  position: absolute;
-  top: 30%;
-  right: 50%;
-  display: inline-block;
-  padding: 2rem;
-  background-color: #f6f6f6;
-}
-.loader .load .spinner {
-  position: absolute;
-  padding: 1rem;
-  border-left: 0.5rem solid #9356dc;
-  border-right: 0.5rem solid #ff79da;
-  opacity: 0.5;
-  border-radius: 50%;
-  -webkit-animation: spin 3s forwards ease-in-out;
-          animation: spin 3s forwards ease-in-out;
-}
-.loader .load .load__text {
-  position: absolute;
-  top: 200%;
-  left: -5vw;
-  font-size: 2rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  background: #aaaaaa;
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-@media only screen and (max-width:365px) {
-  .loader .load .load__text {
-    left: -20vw;
-  }
-}
-.loader .load .load__text::after {
-  content: ".";
-  -webkit-animation: blink 0.5s infinite;
-          animation: blink 0.5s infinite;
-}
-
-.main-content {
-  -webkit-animation: content-fade 1s 3s forwards;
-          animation: content-fade 1s 3s forwards;
-}
-
-@-webkit-keyframes content-fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes content-fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes fade {
-  0% {
-    height: 100vh;
-    visibility: visible;
-  }
-  100% {
-    height: 0vh;
-    visibility: hidden;
-  }
-}
-@keyframes fade {
-  0% {
-    height: 100vh;
-    visibility: visible;
-  }
-  100% {
-    height: 0vh;
-    visibility: hidden;
-  }
-}
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-    scale: 2 1;
-  }
-  100% {
-    -webkit-transform: rotate(3turn);
-            transform: rotate(3turn);
-    scale: 1 2;
-  }
-}
-@keyframes spin {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-    scale: 2 1;
-  }
-  100% {
-    -webkit-transform: rotate(3turn);
-            transform: rotate(3turn);
-    scale: 1 2;
-  }
-}
-@-webkit-keyframes blink {
-  0% {
-    background: #92e2d0;
-    -webkit-background-clip: text;
-            background-clip: text;
-    -webkit-text-fill-color: transparent;
-    position: absolute;
-    content: ".";
-  }
-  25% {
-    background: #9d9d9d;
-    -webkit-background-clip: text;
-            background-clip: text;
-    -webkit-text-fill-color: transparent;
-    position: absolute;
-    content: "..";
-  }
-  50% {
-    background: #92e2d0;
-    -webkit-background-clip: text;
-            background-clip: text;
-    -webkit-text-fill-color: transparent;
-    position: absolute;
-    content: "...";
-  }
-  100% {
-    background: #9d9d9d;
-    -webkit-background-clip: text;
-            background-clip: text;
-    -webkit-text-fill-color: transparent;
-    position: absolute;
-    content: "....";
-  }
-}
-@keyframes blink {
-  0% {
-    background: #92e2d0;
-    -webkit-background-clip: text;
-            background-clip: text;
-    -webkit-text-fill-color: transparent;
-    position: absolute;
-    content: ".";
-  }
-  25% {
-    background: #9d9d9d;
-    -webkit-background-clip: text;
-            background-clip: text;
-    -webkit-text-fill-color: transparent;
-    position: absolute;
-    content: "..";
-  }
-  50% {
-    background: #92e2d0;
-    -webkit-background-clip: text;
-            background-clip: text;
-    -webkit-text-fill-color: transparent;
-    position: absolute;
-    content: "...";
-  }
-  100% {
-    background: #9d9d9d;
-    -webkit-background-clip: text;
-            background-clip: text;
-    -webkit-text-fill-color: transparent;
-    position: absolute;
-    content: "....";
-  }
-}
 .container {
   position: relative;
 }
@@ -633,16 +448,40 @@ header .back {
 }
 
 .restaurant__fiche:hover .restaurant__fiche__plat {
-  -webkit-animation: slide 0.5s both ease-in-out;
-          animation: slide 0.5s both ease-in-out;
+  -webkit-animation: slide 0.5s both;
+          animation: slide 0.5s both;
+}
+.restaurant__fiche:hover .restaurant__fiche__check > i {
+  -webkit-animation: circle-spin 0.5s both;
+          animation: circle-spin 0.5s both;
 }
 
+@-webkit-keyframes circle-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+
+@keyframes circle-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
 @-webkit-keyframes slide {
   to {
     min-width: 15rem;
   }
 }
-
 @keyframes slide {
   to {
     min-width: 15rem;
@@ -1040,6 +879,10 @@ nav h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.restaurant__fiche__check i.fas.fa-check-circle {
+  display: inline-block;
+  font-size: 1.3rem;
 }
 
 .footer {
