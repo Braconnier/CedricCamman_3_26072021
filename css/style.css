@@ -657,11 +657,63 @@ header .back {
   }
 }
 @media only screen and (min-width:1024px) {
+  .restaurant__fiche:nth-child(1n) {
+    -webkit-animation-name: slide-fiche;
+            animation-name: slide-fiche;
+    -webkit-animation-delay: calc(2.875s + 0.125s);
+            animation-delay: calc(2.875s + 0.125s);
+    -webkit-animation-duration: 0.25s;
+            animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+
+  .restaurant__fiche:nth-child(2n) {
+    -webkit-animation-name: slide-fiche;
+            animation-name: slide-fiche;
+    -webkit-animation-delay: calc(2.875s + 0.25s);
+            animation-delay: calc(2.875s + 0.25s);
+    -webkit-animation-duration: 0.25s;
+            animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+
+  .restaurant__fiche:nth-child(3n) {
+    -webkit-animation-name: slide-fiche;
+            animation-name: slide-fiche;
+    -webkit-animation-delay: calc(2.875s + 0.375s);
+            animation-delay: calc(2.875s + 0.375s);
+    -webkit-animation-duration: 0.25s;
+            animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+
+  .restaurant__fiche:nth-child(4n) {
+    -webkit-animation-name: slide-fiche;
+            animation-name: slide-fiche;
+    -webkit-animation-delay: calc(2.875s + 0.5s);
+            animation-delay: calc(2.875s + 0.5s);
+    -webkit-animation-duration: 0.25s;
+            animation-duration: 0.25s;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+
   @-webkit-keyframes slide-fiche {
     0% {
       visibility: hidden;
-      -webkit-transform: translateX(2rem);
-              transform: translateX(2rem);
+      -webkit-transform: translateX(3rem);
+              transform: translateX(3rem);
     }
     100% {
       visibility: visible;
@@ -669,11 +721,12 @@ header .back {
               transform: translateX(0);
     }
   }
+
   @keyframes slide-fiche {
     0% {
       visibility: hidden;
-      -webkit-transform: translateX(2rem);
-              transform: translateX(2rem);
+      -webkit-transform: translateX(3rem);
+              transform: translateX(3rem);
     }
     100% {
       visibility: visible;
@@ -1090,6 +1143,7 @@ nav h1 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   border-radius: 1rem;
+  background: #fff;
   overflow: hidden;
   -webkit-box-shadow: 0 3px 10px 0px #dddddd;
           box-shadow: 0 3px 10px 0px #dddddd;

@@ -84,6 +84,7 @@
   @include flexrow;
   justify-content: space-between;
   border-radius: 1rem;
+  background: #fff;
   overflow: hidden;
   @include shadow($shadow: $bg-shadow);
 
