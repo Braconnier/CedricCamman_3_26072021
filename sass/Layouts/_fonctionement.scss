@@ -50,7 +50,7 @@
 
     &__numero {
       position: absolute;
-      top: calc(50%-12px);
+      top: calc(50% - 12px);
       left: 4px;
       @include flexrow;
       align-items: center;
