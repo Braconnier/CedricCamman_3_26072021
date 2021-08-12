@@ -12,6 +12,7 @@
     @include flexrow;
     height: 200px;
     border-radius: 1rem;
+    margin: 0.5rem;
   }
 
   &__etape {
@@ -24,12 +25,15 @@
     justify-content: flex-start;
     align-items: center;
     position: relative;
+    &__description {
+      padding-right: 1rem;
+    }
 
     @media #{$medium-up} {
-      max-width: calc(0.3 *#{$medium});
+      max-width: 30%;
     }
     @media #{$large-up} {
-      max-width: calc(0.3 *#{$large});
+      max-width: 30%;
     }
     &:last-of-type {
       background: lighten($primary, 35%);

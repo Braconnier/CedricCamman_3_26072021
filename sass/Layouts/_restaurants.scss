@@ -5,29 +5,25 @@
 nav {
   @include flexcolumn;
   gap: 1rem;
-  padding: 1rem;
+  padding: 0.5rem;
   h1 {
+    width: 100%;
     padding-top: 2rem;
+    padding-left: 0.5rem;
     font-size: 1.5rem;
     font-weight: 500;
   }
-  @media #{$medium-up} {
+  @media #{$large-up} ,#{$medium-up} {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    padding: 0;
-    h1 {
-      width: 100%;
-      padding: 1rem;
+    .container {
+      min-width: 48%;
     }
   }
-  @media #{$large-up},#{$medium-up} {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    padding: 0;
+  @media #{$small-up} {
     h1 {
-      width: 100%;
+      padding-left: 0;
     }
   }
 }

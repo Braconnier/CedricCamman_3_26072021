@@ -1,116 +1,152 @@
 @use "../abstracts/" as *;
 @use "../themes" as *;
 
-////////////////////////////////    loader
-// .loader {
-//   position: relative;
-//   top: 0;
-//   left: 0;
-//   width: 100vw;
-//   height: 100vh;
-//   width: 100%;
-//   animation: fade 0ms 3s forwards;
-//   .load {
-//     position: absolute;
-//     top: 30%;
-//     right: 50%;
-//     display: inline-block;
-//     padding: 2rem;
-//     background-color: $bg;
-//     .spinner {
-//       position: absolute;
-//       padding: 1rem;
-//       border-left: 0.5rem solid $primary;
-//       border-right: 0.5rem solid $secondary;
-//       opacity: 0.5;
-//       border-radius: 50%;
-//       animation: spin 3s forwards ease-in-out;
-//     }
-//     .load__text {
-//       position: absolute;
-//       top: 200%;
-//       left: -5vw;
-//       font-size: 2rem;
-//       font-weight: 500;
-//       text-transform: uppercase;
-//       background: darken($bg, 30%);
-//       background-clip: text;
-//       -webkit-text-fill-color: transparent;
+//////////////////////////////    loader
+.loader {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  width: 100%;
+  animation: fade 0ms 3s forwards;
+  .load {
+    position: absolute;
+    top: 30%;
+    right: 50%;
+    display: inline-block;
+    padding: 2rem;
+    background-color: $bg;
+    .spinner {
+      position: absolute;
+      padding: 1rem;
+      border-left: 0.5rem solid $primary;
+      border-right: 0.5rem solid $secondary;
+      opacity: 0.5;
+      border-radius: 50%;
+      animation: spin 3s forwards ease-in-out;
+    }
+    .load__text {
+      position: absolute;
+      top: 200%;
+      left: -5vw;
+      font-size: 2rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      background: darken($bg, 30%);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
 
-//       @media #{$small-down} {
-//         left: -20vw;
-//       }
+      @media #{$small-down} {
+        left: -20vw;
+      }
 
-//       &::after {
-//         content: ".";
-//         animation: blink 0.5s infinite;
-//       }
-//     }
-//   }
-// }
-// .main-content {
-//   animation: content-fade 1s 3s forwards;
-// }
-// @keyframes content-fade {
-//   from {
-//     opacity: 0;
-//   }
-//   to {
-//     opacity: 1;
-//   }
-// }
-// @keyframes fade {
-//   0% {
-//     height: 100vh;
-//     visibility: visible;
-//   }
-//   100% {
-//     height: 0vh;
-//     visibility: hidden;
-//   }
-// }
-// @keyframes spin {
-//   0% {
-//     transform: rotate(0);
-//     scale: 2 1;
-//   }
+      &::after {
+        content: ".";
+        animation: blink 0.5s infinite;
+      }
+    }
+  }
+}
+.main-content {
+  animation: content-fade 0.25s 3s both;
+}
+@keyframes content-fade {
+  from {
+    opacity: 0;
+    height: 0;
+  }
+  to {
+    opacity: 1;
+    height: 100%;
+  }
+}
+@keyframes fade {
+  0% {
+    height: 100vh;
+    visibility: visible;
+  }
+  100% {
+    height: 0vh;
+    visibility: hidden;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+    scale: 2 1;
+  }
 
-//   100% {
-//     transform: rotate(3turn);
-//     scale: 1 2;
-//   }
-// }
-// @keyframes blink {
-//   0% {
-//     background: $tertiary;
-//     background-clip: text;
-//     -webkit-text-fill-color: transparent;
-//     position: absolute;
-//     content: ".";
-//   }
-//   25% {
-//     background: darken($bg, 35);
-//     background-clip: text;
-//     -webkit-text-fill-color: transparent;
-//     position: absolute;
-//     content: "..";
-//   }
-//   50% {
-//     background: $tertiary;
-//     background-clip: text;
-//     -webkit-text-fill-color: transparent;
-//     position: absolute;
+  100% {
+    transform: rotate(3turn);
+    scale: 1 2;
+  }
+}
+@keyframes blink {
+  0% {
+    background: $tertiary;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    content: ".";
+  }
+  25% {
+    background: darken($bg, 35);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    content: "..";
+  }
+  50% {
+    background: $tertiary;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
 
-//     content: "...";
-//   }
-//   100% {
-//     background: darken($bg, 35);
-//     background-clip: text;
-//     -webkit-text-fill-color: transparent;
-//     position: absolute;
-//     content: "....";
-//   }
-// }
+    content: "...";
+  }
+  100% {
+    background: darken($bg, 35);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    content: "....";
+  }
+}
+
+////////////////////////////////    slide des fiches
+
+@for $i from 1 through 4 {
+  .restaurant__fiche:nth-child(#{$i}n) {
+    animation-name: slide-fiche;
+    animation-delay: calc(2.85s + #{$i * 0.15}s);
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+  }
+}
+@keyframes slide-fiche {
+  0% {
+    visibility: hidden;
+    transform: translateY(2rem);
+  }
+  100% {
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+@media #{$large-up} {
+  @keyframes slide-fiche {
+    0% {
+      visibility: hidden;
+      transform: translateX(2rem);
+    }
+    100% {
+      visibility: visible;
+      transform: translateX(0);
+    }
+  }
+}
 ////////////////////////////////  like accueil
 .container {
   position: relative;
