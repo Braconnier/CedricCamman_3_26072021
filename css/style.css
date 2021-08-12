@@ -397,8 +397,8 @@ header .back {
   width: 100vw;
   height: 100vh;
   width: 100%;
-  -webkit-animation: fade 0ms 3s forwards;
-          animation: fade 0ms 3s forwards;
+  -webkit-animation: fade 0ms 2s forwards;
+          animation: fade 0ms 2s forwards;
 }
 .loader .load {
   position: absolute;
@@ -415,8 +415,8 @@ header .back {
   border-right: 0.5rem solid #ff79da;
   opacity: 0.5;
   border-radius: 50%;
-  -webkit-animation: spin 3s forwards ease-in-out;
-          animation: spin 3s forwards ease-in-out;
+  -webkit-animation: spin 2s forwards ease-in-out;
+          animation: spin 2s forwards ease-in-out;
 }
 .loader .load .load__text {
   position: absolute;
@@ -442,8 +442,8 @@ header .back {
 }
 
 .main-content {
-  -webkit-animation: content-fade 0.25s 3s both;
-          animation: content-fade 0.25s 3s both;
+  -webkit-animation: content-fade 0.25s 2s both;
+          animation: content-fade 0.25s 2s both;
 }
 
 @-webkit-keyframes content-fade {
@@ -582,63 +582,63 @@ header .back {
 .restaurant__fiche:nth-child(1n) {
   -webkit-animation-name: slide-fiche;
           animation-name: slide-fiche;
-  -webkit-animation-delay: calc(2.85s + 0.15s);
-          animation-delay: calc(2.85s + 0.15s);
+  -webkit-animation-delay: calc( 2s + 0.125s );
+          animation-delay: calc( 2s + 0.125s );
   -webkit-animation-duration: 0.25s;
           animation-duration: 0.25s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
 }
 
 .restaurant__fiche:nth-child(2n) {
   -webkit-animation-name: slide-fiche;
           animation-name: slide-fiche;
-  -webkit-animation-delay: calc(2.85s + 0.3s);
-          animation-delay: calc(2.85s + 0.3s);
+  -webkit-animation-delay: calc( 2s + 0.25s );
+          animation-delay: calc( 2s + 0.25s );
   -webkit-animation-duration: 0.25s;
           animation-duration: 0.25s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
 }
 
 .restaurant__fiche:nth-child(3n) {
   -webkit-animation-name: slide-fiche;
           animation-name: slide-fiche;
-  -webkit-animation-delay: calc(2.85s + 0.45s);
-          animation-delay: calc(2.85s + 0.45s);
+  -webkit-animation-delay: calc( 2s + 0.375s );
+          animation-delay: calc( 2s + 0.375s );
   -webkit-animation-duration: 0.25s;
           animation-duration: 0.25s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
 }
 
 .restaurant__fiche:nth-child(4n) {
   -webkit-animation-name: slide-fiche;
           animation-name: slide-fiche;
-  -webkit-animation-delay: calc(2.85s + 0.6s);
-          animation-delay: calc(2.85s + 0.6s);
+  -webkit-animation-delay: calc( 2s + 0.5s );
+          animation-delay: calc( 2s + 0.5s );
   -webkit-animation-duration: 0.25s;
           animation-duration: 0.25s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
 }
 
 @-webkit-keyframes slide-fiche {
   0% {
-    visibility: hidden;
+    opacity: 0;
     -webkit-transform: translateY(2rem);
             transform: translateY(2rem);
   }
   100% {
-    visibility: visible;
+    opacity: 1;
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
@@ -646,12 +646,12 @@ header .back {
 
 @keyframes slide-fiche {
   0% {
-    visibility: hidden;
+    opacity: 0;
     -webkit-transform: translateY(2rem);
             transform: translateY(2rem);
   }
   100% {
-    visibility: visible;
+    opacity: 1;
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
@@ -660,63 +660,63 @@ header .back {
   .restaurant__fiche:nth-child(1n) {
     -webkit-animation-name: slide-fiche;
             animation-name: slide-fiche;
-    -webkit-animation-delay: calc(2.875s + 0.125s);
-            animation-delay: calc(2.875s + 0.125s);
+    -webkit-animation-delay: calc( 2s + 0.125s );
+            animation-delay: calc( 2s + 0.125s );
     -webkit-animation-duration: 0.25s;
             animation-duration: 0.25s;
     -webkit-animation-fill-mode: both;
             animation-fill-mode: both;
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
   }
 
   .restaurant__fiche:nth-child(2n) {
     -webkit-animation-name: slide-fiche;
             animation-name: slide-fiche;
-    -webkit-animation-delay: calc(2.875s + 0.25s);
-            animation-delay: calc(2.875s + 0.25s);
+    -webkit-animation-delay: calc( 2s + 0.25s );
+            animation-delay: calc( 2s + 0.25s );
     -webkit-animation-duration: 0.25s;
             animation-duration: 0.25s;
     -webkit-animation-fill-mode: both;
             animation-fill-mode: both;
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
   }
 
   .restaurant__fiche:nth-child(3n) {
     -webkit-animation-name: slide-fiche;
             animation-name: slide-fiche;
-    -webkit-animation-delay: calc(2.875s + 0.375s);
-            animation-delay: calc(2.875s + 0.375s);
+    -webkit-animation-delay: calc( 2s + 0.375s );
+            animation-delay: calc( 2s + 0.375s );
     -webkit-animation-duration: 0.25s;
             animation-duration: 0.25s;
     -webkit-animation-fill-mode: both;
             animation-fill-mode: both;
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
   }
 
   .restaurant__fiche:nth-child(4n) {
     -webkit-animation-name: slide-fiche;
             animation-name: slide-fiche;
-    -webkit-animation-delay: calc(2.875s + 0.5s);
-            animation-delay: calc(2.875s + 0.5s);
+    -webkit-animation-delay: calc( 2s + 0.5s );
+            animation-delay: calc( 2s + 0.5s );
     -webkit-animation-duration: 0.25s;
             animation-duration: 0.25s;
     -webkit-animation-fill-mode: both;
             animation-fill-mode: both;
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
   }
 
   @-webkit-keyframes slide-fiche {
     0% {
-      visibility: hidden;
+      opacity: 0;
       -webkit-transform: translateX(3rem);
               transform: translateX(3rem);
     }
     100% {
-      visibility: visible;
+      opacity: 1;
       -webkit-transform: translateX(0);
               transform: translateX(0);
     }
@@ -724,12 +724,12 @@ header .back {
 
   @keyframes slide-fiche {
     0% {
-      visibility: hidden;
+      opacity: 0;
       -webkit-transform: translateX(3rem);
               transform: translateX(3rem);
     }
     100% {
-      visibility: visible;
+      opacity: 1;
       -webkit-transform: translateX(0);
               transform: translateX(0);
     }
