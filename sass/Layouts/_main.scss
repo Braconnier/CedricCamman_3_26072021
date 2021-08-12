@@ -79,31 +79,34 @@
 }
 .restaurant__fiche {
   cursor: pointer;
-  width: 350px;
+  width: 22rem;
   height: 68px;
   @include flexrow;
   justify-content: space-between;
   border-radius: 1rem;
-  padding: 0.5rem;
+  overflow: hidden;
   @include shadow($shadow: $bg-shadow);
 
   @media #{$small-down} {
-    max-width: 300px;
+    max-width: 18rem;
   }
   @media #{$large-up} {
-    width: calc(0.3 *#{$large});
+    max-width: 20rem;
   }
   &__plat {
+    min-width: 19.5rem;
     height: 100%;
-    @include flexcolumn;
-    justify-content: space-around;
-
+    @media #{$small-down} {
+      min-width: 15.5rem;
+    }
+    @media #{$large-up} {
+      min-width: 17.5rem;
+    }
     &__nomplat {
       font-size: 1rem;
-      height: 40%;
       font-weight: 500;
-      @include flexcolumn;
-      justify-content: center;
+      padding: 0.5rem;
+      display: block;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -113,18 +116,28 @@
       }
     }
     &__description {
-      height: 40%;
+      padding: 0.5rem;
       font-weight: lighter;
-      @include flexcolumn;
-      justify-content: center;
+      display: block;
+      font-size: 0.9rem;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      font-size: 0.9rem;
     }
   }
   &__tarif {
     font-weight: 500;
     padding-top: 2rem;
+    padding: 0.5rem;
+    align-self: center;
+  }
+  &__check {
+    min-width: 4rem;
+    height: 100%;
+    background: $tertiary;
+    color: $bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

@@ -1,161 +1,209 @@
 @use "../abstracts/" as *;
+@use "../themes" as *;
 .loader {
-  width: 0;
-  height: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100vh;
+  width: 100%;
+  animation: fade 0ms 3s forwards;
+  .load {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    display: inline-block;
+    padding: 2rem;
+    background-color: $bg;
+    .spinner {
+      position: absolute;
+      padding: 1rem;
+      border-left: 0.5rem solid $primary;
+      border-right: 0.5rem solid $secondary;
+      opacity: 0.5;
+      border-radius: 50%;
+      animation: spin 3s forwards ease-in-out;
+    }
+    .load__text {
+      position: absolute;
+      top: 200%;
+      font-size: 3rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      background: darken($bg, 30%);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      @media #{$small-down} {
+        font-size: 1rem;
+        right: -25vw;
+      }
+      @media #{$small-up} {
+        font-size: 2rem;
+        right: -15vw;
+      }
+      @media #{$medium-up} {
+        right: -20vw;
+      }
+
+      &::after {
+        content: ".";
+        animation: blink 0.5s infinite;
+      }
+    }
+  }
 }
-.loader {
-  border: 10px solid $primary;
-  border-top: 10px solid $primary;
-  border-bottom: 10px solid $secondary;
-  border-radius: 50%;
-  background-color: $bg;
-  margin: auto;
-  animation: spin 3s;
+.main-content {
+  animation: content-fade 1s 3s forwards;
+}
+@keyframes content-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  0% {
+    height: 100vh;
+    visibility: visible;
+  }
+  100% {
+    height: 0vh;
+    visibility: hidden;
+  }
 }
 @keyframes spin {
   0% {
-    height: 100vh;
-    width: 100vw;
-    display: inline-block;
-    transform: rotate(0deg);
+    transform: rotate(0);
+    scale: 2 1;
   }
-  99% {
-  }
-  99%,
+
   100% {
-    height: 100vh;
-    width: 100vw;
-    opacity: 0;
-    display: none;
-    transform: rotate(360deg);
+    transform: rotate(3turn);
+    scale: 1 2;
   }
 }
+@keyframes blink {
+  0% {
+    background: $tertiary;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    content: ".";
+  }
+  25% {
+    background: darken($bg, 35);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    content: "..";
+  }
+  50% {
+    background: $tertiary;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+
+    content: "...";
+  }
+  100% {
+    background: darken($bg, 35);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    content: "....";
+  }
+}
+
 .container {
   position: relative;
-  & > i.restaurants__carte__like--check {
+  & > .restaurants__carte__like {
     position: absolute;
     bottom: 3rem;
-    right: 2rem;
-    scale: 1.5;
-  }
-  input[type="checkbox"] {
-    position: absolute;
-    bottom: 3rem;
-    right: 2rem;
-    scale: 1.5;
-    // visibility: hidden;
-    .like.restaurants__carte__like--check {
+    right: 3rem;
+    font-size: 1.5rem;
+    & .fa-heart {
+      position: absolute;
+      transition: opacity 0.3s ease-in-out;
+    }
+    .fas.fa-heart {
       opacity: 0;
+      &:before {
+        @include radient;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        scale: 2;
+      }
+    }
+    &:hover {
+      .fas.fa-heart {
+        opacity: 1;
+      }
+      .far.fa-heart {
+        opacity: 0;
+      }
     }
   }
-  input[type="checkbox"] + label > .like.fa-heart {
-    opacity: 1;
-    &::before {
-      content: "\f004";
-      background: $bg;
-    }
-  }
-  input[type="checkbox"]:checked + label > .like.fa-heart {
-    opacity: 1;
-    &::before {
-      content: "\f004";
-      @include radient;
-      background-clip: text;
-    }
-  }
-  // input.like.restaurants__carte__like {
-  //   &--unchecked {
-  //     opacity: 1;
-  //   }
-  //   &--checked {
-  //     transition: opacity 500ms linear;
-  //     opacity: 0;
-  //   }
-  //   &:checked {
-  //     .restaurants__carte__like--unchecked {
-  //       opacity: 0;
-  //     }
-  //     .restaurants__carte__like--checked {
-  //       opacity: 1;
-  //       &::before {
-  //         @include radient;
-  //         background-clip: text;
-  //         -webkit-text-fill-color: transparent;
-  //       }
-  //     }
-  //   }
-  // }
 }
+
 .restaurant__titre__like {
   border: 0;
   background: $bg;
   padding: 0 1rem 1rem 0;
   position: relative;
-  &--unchecked {
+  & .fa-heart {
     position: absolute;
-    opacity: 1;
-    transition: opacity 300ms;
+    transition: opacity 0.3s ease-in-out;
   }
-  &--checked {
-    position: absolute;
+  .fas.fa-heart {
     opacity: 0;
-    transition: opacity 300ms;
+    &:before {
+      @include radient;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      scale: 2;
+    }
   }
   &:hover {
-    .restaurant__titre__like--unchecked {
+    .fas.fa-heart {
+      opacity: 1;
+    }
+    .far.fa-heart {
       opacity: 0;
     }
-    .restaurant__titre__like--checked {
-      opacity: 1;
-      &::before {
-        @include radient;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-    }
   }
 }
 
-.restaurant__fiche {
-  position: relative;
-  &__check {
-    display: none;
-  }
-  &:hover {
-    position: relative;
-    .restaurant__fiche__check {
-      animation: check-scale 1s ease-in-out both;
-      transform-origin: right;
-      position: absolute;
-      top: 0;
-      right: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 1.2rem;
-      width: 4rem;
-      height: 68px;
-      background: $tertiary;
-      color: white;
-      border-radius: 0 1rem 1rem 0;
-
-      &::before {
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-    }
-    .restaurant__fiche__tarif {
-      animation: all 1s ease-in-out both;
-    }
+.restaurant__fiche:hover {
+  .restaurant__fiche__plat {
+    animation: slide 0.5s both ease-in-out;
   }
 }
-@keyframes check-scale {
+@keyframes slide {
   from {
-    width: 0;
-    opacity: 0;
   }
   to {
-    width: 4rem;
-    opacity: 1;
+    min-width: 15rem;
+  }
+}
+
+@media #{$small-down} {
+  @keyframes slide {
+    from {
+    }
+    to {
+      min-width: 10rem;
+    }
+  }
+}
+@media #{$large-up} {
+  @keyframes slide {
+    from {
+    }
+    to {
+      min-width: 13rem;
+    }
   }
 }
