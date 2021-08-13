@@ -255,6 +255,7 @@ header .back {
 }
 
 .fonctionnement {
+  position: relative;
   height: 440px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -283,6 +284,19 @@ header .back {
     height: 200px;
     border-radius: 1rem;
     margin: 0.5rem;
+  }
+}
+.fonctionnement__titre {
+  position: absolute;
+  top: 1.5rem;
+  left: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+@media only screen and (min-width:365px) and (max-width:768px), only screen and (max-width:365px) {
+  .fonctionnement__titre {
+    position: inherit;
+    padding-bottom: 1rem;
   }
 }
 .fonctionnement__etape {
