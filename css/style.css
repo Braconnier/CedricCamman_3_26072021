@@ -881,6 +881,7 @@ header .back {
 .restaurants__carte:hover {
   -webkit-box-shadow: 0 3px 10px 0px #919191;
           box-shadow: 0 3px 10px 0px #919191;
+  scale: 1.01;
 }
 
 nav {
