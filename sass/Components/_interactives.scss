@@ -196,11 +196,12 @@
 .restaurant__titre__like {
   border: 0;
   background: $bg;
-  padding: 0 1rem 1rem 0;
+  padding: 0 1.5rem 1rem 0;
   position: relative;
   & .fa-heart {
     position: absolute;
     transition: opacity 0.3s ease-in-out;
+    scale: 1.5;
   }
   .fas.fa-heart {
     opacity: 0;
@@ -208,7 +209,6 @@
       @include radient;
       background-clip: text;
       -webkit-text-fill-color: transparent;
-      scale: 2;
     }
   }
   &:hover {
@@ -264,4 +264,7 @@
       min-width: 13rem;
     }
   }
+}
+.restaurants__carte:hover {
+  @include shadow(darken($bg-shadow, 30%));
 }

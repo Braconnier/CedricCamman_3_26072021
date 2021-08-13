@@ -784,13 +784,14 @@ header .back {
 .restaurant__titre__like {
   border: 0;
   background: #f6f6f6;
-  padding: 0 1rem 1rem 0;
+  padding: 0 1.5rem 1rem 0;
   position: relative;
 }
 .restaurant__titre__like .fa-heart {
   position: absolute;
   -webkit-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
+  scale: 1.5;
 }
 .restaurant__titre__like .fas.fa-heart {
   opacity: 0;
@@ -801,7 +802,6 @@ header .back {
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
-  scale: 2;
 }
 .restaurant__titre__like:hover .fas.fa-heart {
   opacity: 1;
@@ -878,6 +878,11 @@ header .back {
     }
   }
 }
+.restaurants__carte:hover {
+  -webkit-box-shadow: 0 3px 10px 0px #919191;
+          box-shadow: 0 3px 10px 0px #919191;
+}
+
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
