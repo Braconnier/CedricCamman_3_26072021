@@ -749,7 +749,7 @@ header .back {
     }
   }
 }
-.restaurants__carte:hover {
+.container:hover {
   -webkit-box-shadow: 0 3px 10px 0px #919191;
           box-shadow: 0 3px 10px 0px #919191;
 }
@@ -797,6 +797,11 @@ header .back {
   }
   .container input[type=checkbox]:hover ~ .far {
     opacity: 0;
+  }
+  .container input[type=checkbox]:hover .container,
+.container .container .container {
+    -webkit-box-shadow: 0 3px 10px 0px #919191;
+            box-shadow: 0 3px 10px 0px #919191;
   }
 }
 
@@ -953,6 +958,10 @@ nav h1 {
   nav h1 {
     padding-left: 0;
   }
+}
+
+.container {
+  border-radius: 1rem;
 }
 
 .restaurants__carte {

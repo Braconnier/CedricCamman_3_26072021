@@ -162,7 +162,7 @@
   }
 }
 ////////////////////////////////  like accueil
-.restaurants__carte:hover {
+.container:hover {
   @include shadow(darken($bg-shadow, 30%));
 }
 .container {
@@ -205,6 +205,12 @@
     }
     input[type="checkbox"]:hover ~ .far {
       opacity: 0;
+    }
+    input[type="checkbox"]:hover,
+    .container {
+      .container {
+        @include shadow(darken($bg-shadow, 30%));
+      }
     }
   }
 }
