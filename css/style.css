@@ -411,8 +411,8 @@ header .back {
   width: 100vw;
   height: 100vh;
   width: 100%;
-  -webkit-animation: fade 0ms 2s forwards;
-          animation: fade 0ms 2s forwards;
+  -webkit-animation: fade 0ms 0s forwards;
+          animation: fade 0ms 0s forwards;
 }
 .loader .load {
   position: absolute;
@@ -429,8 +429,8 @@ header .back {
   border-right: 0.5rem solid #ff79da;
   opacity: 0.5;
   border-radius: 50%;
-  -webkit-animation: spin 2s forwards ease-in-out;
-          animation: spin 2s forwards ease-in-out;
+  -webkit-animation: spin 0s forwards ease-in-out;
+          animation: spin 0s forwards ease-in-out;
 }
 .loader .load .load__text {
   position: absolute;
@@ -456,8 +456,8 @@ header .back {
 }
 
 .main-content {
-  -webkit-animation: content-fade 0.25s 2s both;
-          animation: content-fade 0.25s 2s both;
+  -webkit-animation: content-fade 0.25s 0s both;
+          animation: content-fade 0.25s 0s both;
 }
 
 @-webkit-keyframes content-fade {
@@ -596,8 +596,8 @@ header .back {
 .restaurant__fiche:nth-child(1n) {
   -webkit-animation-name: slide-fiche;
           animation-name: slide-fiche;
-  -webkit-animation-delay: calc( 2s + 0.125s );
-          animation-delay: calc( 2s + 0.125s );
+  -webkit-animation-delay: calc( 0s + 0.125s );
+          animation-delay: calc( 0s + 0.125s );
   -webkit-animation-duration: 0.25s;
           animation-duration: 0.25s;
   -webkit-animation-fill-mode: both;
@@ -609,8 +609,8 @@ header .back {
 .restaurant__fiche:nth-child(2n) {
   -webkit-animation-name: slide-fiche;
           animation-name: slide-fiche;
-  -webkit-animation-delay: calc( 2s + 0.25s );
-          animation-delay: calc( 2s + 0.25s );
+  -webkit-animation-delay: calc( 0s + 0.25s );
+          animation-delay: calc( 0s + 0.25s );
   -webkit-animation-duration: 0.25s;
           animation-duration: 0.25s;
   -webkit-animation-fill-mode: both;
@@ -622,8 +622,8 @@ header .back {
 .restaurant__fiche:nth-child(3n) {
   -webkit-animation-name: slide-fiche;
           animation-name: slide-fiche;
-  -webkit-animation-delay: calc( 2s + 0.375s );
-          animation-delay: calc( 2s + 0.375s );
+  -webkit-animation-delay: calc( 0s + 0.375s );
+          animation-delay: calc( 0s + 0.375s );
   -webkit-animation-duration: 0.25s;
           animation-duration: 0.25s;
   -webkit-animation-fill-mode: both;
@@ -635,8 +635,8 @@ header .back {
 .restaurant__fiche:nth-child(4n) {
   -webkit-animation-name: slide-fiche;
           animation-name: slide-fiche;
-  -webkit-animation-delay: calc( 2s + 0.5s );
-          animation-delay: calc( 2s + 0.5s );
+  -webkit-animation-delay: calc( 0s + 0.5s );
+          animation-delay: calc( 0s + 0.5s );
   -webkit-animation-duration: 0.25s;
           animation-duration: 0.25s;
   -webkit-animation-fill-mode: both;
@@ -674,8 +674,8 @@ header .back {
   .restaurant__fiche:nth-child(1n) {
     -webkit-animation-name: slide-fiche;
             animation-name: slide-fiche;
-    -webkit-animation-delay: calc( 2s + 0.125s );
-            animation-delay: calc( 2s + 0.125s );
+    -webkit-animation-delay: calc( 0s + 0.125s );
+            animation-delay: calc( 0s + 0.125s );
     -webkit-animation-duration: 0.25s;
             animation-duration: 0.25s;
     -webkit-animation-fill-mode: both;
@@ -687,8 +687,8 @@ header .back {
   .restaurant__fiche:nth-child(2n) {
     -webkit-animation-name: slide-fiche;
             animation-name: slide-fiche;
-    -webkit-animation-delay: calc( 2s + 0.25s );
-            animation-delay: calc( 2s + 0.25s );
+    -webkit-animation-delay: calc( 0s + 0.25s );
+            animation-delay: calc( 0s + 0.25s );
     -webkit-animation-duration: 0.25s;
             animation-duration: 0.25s;
     -webkit-animation-fill-mode: both;
@@ -700,8 +700,8 @@ header .back {
   .restaurant__fiche:nth-child(3n) {
     -webkit-animation-name: slide-fiche;
             animation-name: slide-fiche;
-    -webkit-animation-delay: calc( 2s + 0.375s );
-            animation-delay: calc( 2s + 0.375s );
+    -webkit-animation-delay: calc( 0s + 0.375s );
+            animation-delay: calc( 0s + 0.375s );
     -webkit-animation-duration: 0.25s;
             animation-duration: 0.25s;
     -webkit-animation-fill-mode: both;
@@ -713,8 +713,8 @@ header .back {
   .restaurant__fiche:nth-child(4n) {
     -webkit-animation-name: slide-fiche;
             animation-name: slide-fiche;
-    -webkit-animation-delay: calc( 2s + 0.5s );
-            animation-delay: calc( 2s + 0.5s );
+    -webkit-animation-delay: calc( 0s + 0.5s );
+            animation-delay: calc( 0s + 0.5s );
     -webkit-animation-duration: 0.25s;
             animation-duration: 0.25s;
     -webkit-animation-fill-mode: both;
@@ -749,65 +749,101 @@ header .back {
     }
   }
 }
+.restaurants__carte:hover {
+  -webkit-box-shadow: 0 3px 10px 0px #919191;
+          box-shadow: 0 3px 10px 0px #919191;
+}
+
 .container {
   position: relative;
 }
-.container > .restaurants__carte__like {
+.container .restaurants__carte__like {
+  cursor: pointer;
   position: absolute;
-  bottom: 3rem;
-  right: 3rem;
-  font-size: 1.5rem;
+  height: 30px;
+  width: 30px;
+  bottom: 1.4rem;
+  right: 1.3rem;
+  opacity: 0;
+  z-index: 1;
 }
-.container > .restaurants__carte__like .fa-heart {
+.container .fa-heart {
   position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  scale: 1.5;
   -webkit-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
 }
-.container > .restaurants__carte__like .fas.fa-heart {
+.container .fas {
   opacity: 0;
 }
-.container > .restaurants__carte__like .fas.fa-heart:before {
+.container .fas:before {
   background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), color-stop(20%, #9356dc), to(#ff79da));
   background: linear-gradient(0deg, #9356dc 0%, #9356dc 20%, #ff79da 100%);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
-  scale: 2;
 }
-.container > .restaurants__carte__like:hover .fas.fa-heart {
+.container input[type=checkbox]:checked ~ .fas {
   opacity: 1;
 }
-.container > .restaurants__carte__like:hover .far.fa-heart {
+.container input[type=checkbox]:checked ~ .far {
   opacity: 0;
+}
+@media (hover: hover) {
+  .container input[type=checkbox]:hover ~ .fas {
+    opacity: 1;
+  }
+  .container input[type=checkbox]:hover ~ .far {
+    opacity: 0;
+  }
 }
 
-.restaurant__titre__like {
-  border: 0;
-  background: #f6f6f6;
-  padding: 0 1.5rem 1rem 0;
+.restaurant__titre {
   position: relative;
 }
-.restaurant__titre__like .fa-heart {
+.restaurant__titre__like {
+  cursor: pointer;
   position: absolute;
+  height: 20px;
+  width: 20px;
+  bottom: 3rem;
+  right: 2rem;
+  opacity: 0;
+  z-index: 1;
+}
+.restaurant__titre .fa-heart {
+  position: absolute;
+  bottom: 3rem;
+  right: 2rem;
+  scale: 1.5;
   -webkit-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
-  scale: 1.5;
 }
-.restaurant__titre__like .fas.fa-heart {
+.restaurant__titre .fas.fa-heart {
   opacity: 0;
 }
-.restaurant__titre__like .fas.fa-heart:before {
+.restaurant__titre .fas.fa-heart:before {
   background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), color-stop(20%, #9356dc), to(#ff79da));
   background: linear-gradient(0deg, #9356dc 0%, #9356dc 20%, #ff79da 100%);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.restaurant__titre__like:hover .fas.fa-heart {
+.restaurant__titre input[type=checkbox]:checked ~ .fas {
   opacity: 1;
 }
-.restaurant__titre__like:hover .far.fa-heart {
+.restaurant__titre input[type=checkbox]:checked ~ .far {
   opacity: 0;
+}
+@media (hover: hover) {
+  .restaurant__titre input[type=checkbox]:hover ~ .fas {
+    opacity: 1;
+  }
+  .restaurant__titre input[type=checkbox]:hover ~ .far {
+    opacity: 0;
+  }
 }
 
 .restaurant__fiche:hover {
@@ -878,12 +914,6 @@ header .back {
     }
   }
 }
-.restaurants__carte:hover {
-  -webkit-box-shadow: 0 3px 10px 0px #919191;
-          box-shadow: 0 3px 10px 0px #919191;
-  scale: 1.01;
-}
-
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
