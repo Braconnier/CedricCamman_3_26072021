@@ -413,8 +413,8 @@ header .back {
   width: 100vw;
   height: 100vh;
   width: 100%;
-  -webkit-animation: fade 0ms 0s forwards;
-          animation: fade 0ms 0s forwards;
+  -webkit-animation: fade 0ms 2s forwards;
+          animation: fade 0ms 2s forwards;
 }
 .loader .load {
   position: absolute;
@@ -431,8 +431,8 @@ header .back {
   border-right: 0.5rem solid #ff79da;
   opacity: 0.5;
   border-radius: 50%;
-  -webkit-animation: spin 0s forwards ease-in-out;
-          animation: spin 0s forwards ease-in-out;
+  -webkit-animation: spin 2s forwards ease-in-out;
+          animation: spin 2s forwards ease-in-out;
 }
 .loader .load .load__text {
   position: absolute;
@@ -458,8 +458,8 @@ header .back {
 }
 
 .main-content {
-  -webkit-animation: content-fade 0.25s 0s both;
-          animation: content-fade 0.25s 0s both;
+  -webkit-animation: content-fade 0.25s 2s both;
+          animation: content-fade 0.25s 2s both;
 }
 
 @-webkit-keyframes content-fade {
@@ -598,8 +598,8 @@ header .back {
 .restaurant__fiche:nth-child(1n) {
   -webkit-animation-name: slide-fiche;
           animation-name: slide-fiche;
-  -webkit-animation-delay: calc( 0s + 0.125s );
-          animation-delay: calc( 0s + 0.125s );
+  -webkit-animation-delay: calc( 2s + 0.125s );
+          animation-delay: calc( 2s + 0.125s );
   -webkit-animation-duration: 0.25s;
           animation-duration: 0.25s;
   -webkit-animation-fill-mode: both;
@@ -611,8 +611,8 @@ header .back {
 .restaurant__fiche:nth-child(2n) {
   -webkit-animation-name: slide-fiche;
           animation-name: slide-fiche;
-  -webkit-animation-delay: calc( 0s + 0.25s );
-          animation-delay: calc( 0s + 0.25s );
+  -webkit-animation-delay: calc( 2s + 0.25s );
+          animation-delay: calc( 2s + 0.25s );
   -webkit-animation-duration: 0.25s;
           animation-duration: 0.25s;
   -webkit-animation-fill-mode: both;
@@ -624,8 +624,8 @@ header .back {
 .restaurant__fiche:nth-child(3n) {
   -webkit-animation-name: slide-fiche;
           animation-name: slide-fiche;
-  -webkit-animation-delay: calc( 0s + 0.375s );
-          animation-delay: calc( 0s + 0.375s );
+  -webkit-animation-delay: calc( 2s + 0.375s );
+          animation-delay: calc( 2s + 0.375s );
   -webkit-animation-duration: 0.25s;
           animation-duration: 0.25s;
   -webkit-animation-fill-mode: both;
@@ -637,8 +637,8 @@ header .back {
 .restaurant__fiche:nth-child(4n) {
   -webkit-animation-name: slide-fiche;
           animation-name: slide-fiche;
-  -webkit-animation-delay: calc( 0s + 0.5s );
-          animation-delay: calc( 0s + 0.5s );
+  -webkit-animation-delay: calc( 2s + 0.5s );
+          animation-delay: calc( 2s + 0.5s );
   -webkit-animation-duration: 0.25s;
           animation-duration: 0.25s;
   -webkit-animation-fill-mode: both;
@@ -676,8 +676,8 @@ header .back {
   .restaurant__fiche:nth-child(1n) {
     -webkit-animation-name: slide-fiche;
             animation-name: slide-fiche;
-    -webkit-animation-delay: calc( 0s + 0.125s );
-            animation-delay: calc( 0s + 0.125s );
+    -webkit-animation-delay: calc( 2s + 0.125s );
+            animation-delay: calc( 2s + 0.125s );
     -webkit-animation-duration: 0.25s;
             animation-duration: 0.25s;
     -webkit-animation-fill-mode: both;
@@ -689,8 +689,8 @@ header .back {
   .restaurant__fiche:nth-child(2n) {
     -webkit-animation-name: slide-fiche;
             animation-name: slide-fiche;
-    -webkit-animation-delay: calc( 0s + 0.25s );
-            animation-delay: calc( 0s + 0.25s );
+    -webkit-animation-delay: calc( 2s + 0.25s );
+            animation-delay: calc( 2s + 0.25s );
     -webkit-animation-duration: 0.25s;
             animation-duration: 0.25s;
     -webkit-animation-fill-mode: both;
@@ -702,8 +702,8 @@ header .back {
   .restaurant__fiche:nth-child(3n) {
     -webkit-animation-name: slide-fiche;
             animation-name: slide-fiche;
-    -webkit-animation-delay: calc( 0s + 0.375s );
-            animation-delay: calc( 0s + 0.375s );
+    -webkit-animation-delay: calc( 2s + 0.375s );
+            animation-delay: calc( 2s + 0.375s );
     -webkit-animation-duration: 0.25s;
             animation-duration: 0.25s;
     -webkit-animation-fill-mode: both;
@@ -715,8 +715,8 @@ header .back {
   .restaurant__fiche:nth-child(4n) {
     -webkit-animation-name: slide-fiche;
             animation-name: slide-fiche;
-    -webkit-animation-delay: calc( 0s + 0.5s );
-            animation-delay: calc( 0s + 0.5s );
+    -webkit-animation-delay: calc( 2s + 0.5s );
+            animation-delay: calc( 2s + 0.5s );
     -webkit-animation-duration: 0.25s;
             animation-duration: 0.25s;
     -webkit-animation-fill-mode: both;
