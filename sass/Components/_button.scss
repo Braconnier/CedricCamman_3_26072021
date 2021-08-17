@@ -14,5 +14,6 @@
   @include radient;
   &:hover {
     filter: opacity(0.7);
+    @include shadow(darken($btn-shadow, 30%));
   }
 }

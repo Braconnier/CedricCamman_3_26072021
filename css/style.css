@@ -402,6 +402,8 @@ header .back {
 .button:hover {
   -webkit-filter: opacity(0.7);
           filter: opacity(0.7);
+  -webkit-box-shadow: 0 3px 10px 0px #5e5e5e;
+          box-shadow: 0 3px 10px 0px #5e5e5e;
 }
 
 .loader {
@@ -851,15 +853,18 @@ header .back {
   }
 }
 
-.restaurant__fiche:hover {
+.restaurant__fiche:hover,
+.restaurant__fiche input[type=radio]:checked {
   -webkit-box-shadow: 0 3px 10px 0px #919191;
           box-shadow: 0 3px 10px 0px #919191;
 }
-.restaurant__fiche:hover .restaurant__fiche__plat {
+.restaurant__fiche:hover .restaurant__fiche__plat,
+.restaurant__fiche input[type=radio]:checked .restaurant__fiche__plat {
   -webkit-animation: slide 0.5s both;
           animation: slide 0.5s both;
 }
-.restaurant__fiche:hover .restaurant__fiche__check > i {
+.restaurant__fiche:hover .restaurant__fiche__check > i,
+.restaurant__fiche input[type=radio]:checked .restaurant__fiche__check > i {
   -webkit-animation: circle-spin 0.5s both;
           animation: circle-spin 0.5s both;
 }
