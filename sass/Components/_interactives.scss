@@ -3,7 +3,7 @@
 
 //////////////////////////////    loader
 .loader {
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
@@ -52,12 +52,14 @@
   animation: content-fade 0.25s $loader-duration both;
 }
 @keyframes content-fade {
-  from {
-    opacity: 0;
+  0% {
+    visibility: hidden;
     height: 0;
   }
-  to {
-    opacity: 1;
+  1% {
+    visibility: visible;
+  }
+  100% {
     height: 100%;
   }
 }
