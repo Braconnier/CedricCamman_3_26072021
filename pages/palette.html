@@ -26,8 +26,10 @@
     </div>
     <div class="main-content">
       <header>
-        <a href="../index.html"> <i class="fas fa-arrow-left back"></i></a>
-        <h1>ohmyfood</h1>
+        <div class="header__container">
+          <a href="../index.html"> <i class="fas fa-arrow-left back"></i></a>
+          <h2>ohmyfood</h2>
+        </div>
       </header>
 
       <main>
@@ -35,7 +37,9 @@
           <img src="../img/palette.jpg" alt="La palette du gout" />
         </div>
         <div class="restaurant__titre">
-          <h1>La palette du goût</h1>
+          <div class="titre__box">
+            <h1>La palette du goût</h1>
+          </div>
           <input type="checkbox" class="restaurant__titre__like" />
           <i class="restaurant__titre__like--unchecked far fa-heart"></i>
           <i class="restaurant__titre__like--checked fas fa-heart"></i>
@@ -198,19 +202,21 @@
         </div>
       </main>
       <footer class="footer">
-        <a class="footer__link" href="../index.html">
-          <h1>ohmyfood</h1>
-        </a>
-        <a class="footer__link" href="">
-          <i class="fas fa-utensils"></i>
-          <p>Proposer on restaurant</p>
-        </a>
-        <a class="footer__link" href="">
-          <i class="fas fa-hands-helping"></i>
-          <p>Devenir partenaire</p>
-        </a>
-        <a class="footer__link" href="">Mentions légales</a>
-        <a class="footer__link" href="mailto:">Contact</a>
+        <div class="footer__container">
+          <a class="footer__link" href="#">
+            <h2>ohmyfood</h2>
+          </a>
+          <a class="footer__link" href="">
+            <i class="fas fa-utensils"></i>
+            <p>Proposer on restaurant</p>
+          </a>
+          <a class="footer__link" href="">
+            <i class="fas fa-hands-helping"></i>
+            <p>Devenir partenaire</p>
+          </a>
+          <a class="footer__link" href="">Mentions légales</a>
+          <a class="footer__link" href="mailto:">Contact</a>
+        </div>
       </footer>
     </div>
   </body>

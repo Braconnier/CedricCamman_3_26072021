@@ -1,8 +1,12 @@
 @use "../abstracts" as *;
 @use "../components" as *;
 @use "../themes" as *;
-
+.fonctionnement {
+  margin: 0 auto;
+}
 nav {
+  max-width: 1024px;
+  margin: 0 auto;
   @include flexcolumn;
   gap: 1rem;
   padding: 0.5rem;
@@ -54,7 +58,7 @@ nav {
     justify-content: space-between;
     align-items: flex-start;
     padding: 1rem;
-    h2 {
+    h3 {
       font-size: 1.1rem;
       margin-bottom: 0.5rem;
       font-weight: 500;

@@ -3,6 +3,7 @@
 
 .fonctionnement {
   position: relative;
+  max-width: 1024px;
   height: 440px;
   @include flexcolumn;
   justify-content: space-evenly;
@@ -22,7 +23,7 @@
     font-size: 1.5rem;
     font-weight: 500;
 
-    @media #{$small-up},#{$small-down} {
+    @media #{$small-down},#{$small-up} {
       position: inherit;
       padding-bottom: 1rem;
     }

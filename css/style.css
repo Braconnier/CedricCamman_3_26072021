@@ -154,28 +154,15 @@ body {
   font-size: 16px;
   font-family: "roboto", sans-serif;
   background: #f6f6f6;
-  max-width: 375px;
   margin: 0 auto;
-}
-@media only screen and (min-width:365px) and (max-width:768px) {
-  body {
-    max-width: 768px;
-  }
-}
-@media only screen and (min-width:768px) and (max-width:1024px) {
-  body {
-    max-width: 1024px;
-  }
-}
-@media only screen and (min-width:1024px) {
-  body {
-    max-width: 1024px;
-  }
 }
 
 header {
   height: 63px;
-  color: #000;
+  -webkit-box-shadow: 0 3px 10px 0px #dddddd;
+          box-shadow: 0 3px 10px 0px #dddddd;
+}
+header .header__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -183,25 +170,28 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
+  height: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  max-width: 1024px;
+  margin: 0 auto;
   position: relative;
-  -webkit-box-shadow: 0 3px 10px 0px #dddddd;
-          box-shadow: 0 3px 10px 0px #dddddd;
+  color: #000;
 }
-header h1 {
+header h2 {
   font-family: "shrikhand", sans-serif;
   font-weight: bold;
   font-size: 2rem;
 }
 header .back {
   position: absolute;
-  top: 25px;
-  left: 10px;
+  top: 1rem;
+  left: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .localiser {
@@ -256,6 +246,7 @@ header .back {
 
 .fonctionnement {
   position: relative;
+  max-width: 1024px;
   height: 440px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -293,7 +284,7 @@ header .back {
   font-size: 1.5rem;
   font-weight: 500;
 }
-@media only screen and (min-width:365px) and (max-width:768px), only screen and (max-width:365px) {
+@media only screen and (max-width:365px), only screen and (min-width:365px) and (max-width:768px) {
   .fonctionnement__titre {
     position: inherit;
     padding-bottom: 1rem;
@@ -407,37 +398,38 @@ header .back {
 }
 
 .loader {
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  width: 100%;
-  -webkit-animation: fade 0ms 2s forwards;
-          animation: fade 0ms 2s forwards;
+  background-color: #f6f6f6;
+  -webkit-animation: fade 0ms 3s forwards;
+          animation: fade 0ms 3s forwards;
 }
 .loader .load {
-  position: absolute;
-  top: 30%;
-  right: 50%;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 2rem;
-  background-color: #f6f6f6;
 }
 .loader .load .spinner {
   position: absolute;
+  top: 30%;
   padding: 1rem;
   border-left: 0.5rem solid #9356dc;
   border-right: 0.5rem solid #ff79da;
   opacity: 0.5;
   border-radius: 50%;
-  -webkit-animation: spin 2s forwards ease-in-out;
-          animation: spin 2s forwards ease-in-out;
+  -webkit-animation: spin 3s forwards ease-in-out;
+          animation: spin 3s forwards ease-in-out;
 }
 .loader .load .load__text {
   position: absolute;
-  top: 200%;
-  left: -5vw;
+  top: 50%;
   font-size: 2rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -446,40 +438,43 @@ header .back {
           background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-@media only screen and (max-width:365px) {
-  .loader .load .load__text {
-    left: -20vw;
-  }
-}
 .loader .load .load__text::after {
-  content: ".";
+  content: "";
   -webkit-animation: blink 0.5s infinite;
           animation: blink 0.5s infinite;
 }
 
 .main-content {
-  -webkit-animation: content-fade 0.25s 2s both;
-          animation: content-fade 0.25s 2s both;
+  -webkit-animation: content-fade 0.25s 3s both;
+          animation: content-fade 0.25s 3s both;
 }
 
 @-webkit-keyframes content-fade {
-  from {
-    opacity: 0;
+  0% {
+    visibility: hidden;
     height: 0;
   }
-  to {
-    opacity: 1;
+  99% {
+    visibility: hidden;
+    height: 0;
+  }
+  100% {
+    visibility: visible;
     height: 100%;
   }
 }
 
 @keyframes content-fade {
-  from {
-    opacity: 0;
+  0% {
+    visibility: hidden;
     height: 0;
   }
-  to {
-    opacity: 1;
+  99% {
+    visibility: hidden;
+    height: 0;
+  }
+  100% {
+    visibility: visible;
     height: 100%;
   }
 }
@@ -552,13 +547,21 @@ header .back {
     position: absolute;
     content: "...";
   }
-  100% {
+  75% {
     background: #9d9d9d;
     -webkit-background-clip: text;
             background-clip: text;
     -webkit-text-fill-color: transparent;
     position: absolute;
     content: "....";
+  }
+  100% {
+    background: #92e2d0;
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    content: ".....";
   }
 }
 @keyframes blink {
@@ -586,7 +589,7 @@ header .back {
     position: absolute;
     content: "...";
   }
-  100% {
+  75% {
     background: #9d9d9d;
     -webkit-background-clip: text;
             background-clip: text;
@@ -594,12 +597,20 @@ header .back {
     position: absolute;
     content: "....";
   }
+  100% {
+    background: #92e2d0;
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    content: ".....";
+  }
 }
 .restaurant__fiche:nth-child(1n) {
   -webkit-animation-name: slide-fiche;
           animation-name: slide-fiche;
-  -webkit-animation-delay: calc( 2s + 0.125s );
-          animation-delay: calc( 2s + 0.125s );
+  -webkit-animation-delay: calc( 3s + 0.125s );
+          animation-delay: calc( 3s + 0.125s );
   -webkit-animation-duration: 0.25s;
           animation-duration: 0.25s;
   -webkit-animation-fill-mode: both;
@@ -611,8 +622,8 @@ header .back {
 .restaurant__fiche:nth-child(2n) {
   -webkit-animation-name: slide-fiche;
           animation-name: slide-fiche;
-  -webkit-animation-delay: calc( 2s + 0.25s );
-          animation-delay: calc( 2s + 0.25s );
+  -webkit-animation-delay: calc( 3s + 0.25s );
+          animation-delay: calc( 3s + 0.25s );
   -webkit-animation-duration: 0.25s;
           animation-duration: 0.25s;
   -webkit-animation-fill-mode: both;
@@ -624,8 +635,8 @@ header .back {
 .restaurant__fiche:nth-child(3n) {
   -webkit-animation-name: slide-fiche;
           animation-name: slide-fiche;
-  -webkit-animation-delay: calc( 2s + 0.375s );
-          animation-delay: calc( 2s + 0.375s );
+  -webkit-animation-delay: calc( 3s + 0.375s );
+          animation-delay: calc( 3s + 0.375s );
   -webkit-animation-duration: 0.25s;
           animation-duration: 0.25s;
   -webkit-animation-fill-mode: both;
@@ -637,8 +648,8 @@ header .back {
 .restaurant__fiche:nth-child(4n) {
   -webkit-animation-name: slide-fiche;
           animation-name: slide-fiche;
-  -webkit-animation-delay: calc( 2s + 0.5s );
-          animation-delay: calc( 2s + 0.5s );
+  -webkit-animation-delay: calc( 3s + 0.5s );
+          animation-delay: calc( 3s + 0.5s );
   -webkit-animation-duration: 0.25s;
           animation-duration: 0.25s;
   -webkit-animation-fill-mode: both;
@@ -676,8 +687,8 @@ header .back {
   .restaurant__fiche:nth-child(1n) {
     -webkit-animation-name: slide-fiche;
             animation-name: slide-fiche;
-    -webkit-animation-delay: calc( 2s + 0.125s );
-            animation-delay: calc( 2s + 0.125s );
+    -webkit-animation-delay: calc( 3s + 0.125s );
+            animation-delay: calc( 3s + 0.125s );
     -webkit-animation-duration: 0.25s;
             animation-duration: 0.25s;
     -webkit-animation-fill-mode: both;
@@ -689,8 +700,8 @@ header .back {
   .restaurant__fiche:nth-child(2n) {
     -webkit-animation-name: slide-fiche;
             animation-name: slide-fiche;
-    -webkit-animation-delay: calc( 2s + 0.25s );
-            animation-delay: calc( 2s + 0.25s );
+    -webkit-animation-delay: calc( 3s + 0.25s );
+            animation-delay: calc( 3s + 0.25s );
     -webkit-animation-duration: 0.25s;
             animation-duration: 0.25s;
     -webkit-animation-fill-mode: both;
@@ -702,8 +713,8 @@ header .back {
   .restaurant__fiche:nth-child(3n) {
     -webkit-animation-name: slide-fiche;
             animation-name: slide-fiche;
-    -webkit-animation-delay: calc( 2s + 0.375s );
-            animation-delay: calc( 2s + 0.375s );
+    -webkit-animation-delay: calc( 3s + 0.375s );
+            animation-delay: calc( 3s + 0.375s );
     -webkit-animation-duration: 0.25s;
             animation-duration: 0.25s;
     -webkit-animation-fill-mode: both;
@@ -715,8 +726,8 @@ header .back {
   .restaurant__fiche:nth-child(4n) {
     -webkit-animation-name: slide-fiche;
             animation-name: slide-fiche;
-    -webkit-animation-delay: calc( 2s + 0.5s );
-            animation-delay: calc( 2s + 0.5s );
+    -webkit-animation-delay: calc( 3s + 0.5s );
+            animation-delay: calc( 3s + 0.5s );
     -webkit-animation-duration: 0.25s;
             animation-duration: 0.25s;
     -webkit-animation-fill-mode: both;
@@ -773,7 +784,7 @@ header .back {
   position: absolute;
   bottom: 2rem;
   right: 2rem;
-  scale: 1.5;
+  font-size: 1.5rem;
   -webkit-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
 }
@@ -813,18 +824,18 @@ header .back {
 .restaurant__titre__like {
   cursor: pointer;
   position: absolute;
-  height: 20px;
-  width: 20px;
-  bottom: 3rem;
-  right: 2rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  top: 2rem;
+  right: 1.8rem;
   opacity: 0;
   z-index: 1;
 }
 .restaurant__titre .fa-heart {
   position: absolute;
-  bottom: 3rem;
+  top: 2.1rem;
   right: 2rem;
-  scale: 1.5;
+  font-size: 1.5rem;
   -webkit-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
 }
@@ -924,7 +935,13 @@ header .back {
     }
   }
 }
+.fonctionnement {
+  margin: 0 auto;
+}
+
 nav {
+  max-width: 1024px;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1025,13 +1042,13 @@ nav h1 {
           align-items: flex-start;
   padding: 1rem;
 }
-.restaurants__carte__description h2 {
+.restaurants__carte__description h3 {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
   font-weight: 500;
 }
 .restaurants__carte__description i {
-  scale: 1.5;
+  font-size: 1.5rem;
 }
 .restaurants__carte__description p {
   font-weight: lighter;
@@ -1054,6 +1071,8 @@ nav h1 {
   max-width: 100%;
   height: 256px;
   position: relative;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 .restaurant__imagebox > img {
   -o-object-fit: cover;
@@ -1064,6 +1083,8 @@ nav h1 {
 }
 
 .restaurant__titre {
+  max-width: 1024px;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1071,41 +1092,39 @@ nav h1 {
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  padding-left: 1rem;
   padding-bottom: 2rem;
   margin-top: -4rem;
   background: #f6f6f6;
   position: relative;
-  width: 100%;
   height: 80px;
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
 }
-.restaurant__titre h1 {
+@media only screen and (min-width:365px) and (max-width:768px), only screen and (min-width:768px) and (max-width:1024px) {
+  .restaurant__titre .titre__box {
+    width: 23rem;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.restaurant__titre .titre__box h1 {
+  padding-top: 2rem;
   font-family: "shrikhand", sans-serif;
   font-size: 1.8rem;
 }
-@media only screen and (max-width:365px) {
-  .restaurant__titre h1 {
-    font-size: 1.5rem;
-  }
-}
-@media only screen and (min-width:768px) and (max-width:1024px), only screen and (min-width:1024px) {
-  .restaurant__titre h1 {
+@media only screen and (min-width:365px) and (max-width:768px), only screen and (min-width:768px) and (max-width:1024px), only screen and (min-width:1024px) {
+  .restaurant__titre .titre__box h1 {
     font-size: 1.8rem;
-    letter-spacing: 0.15rem;
   }
-}
-.restaurant__titre__like {
-  position: absolute;
-  right: 1.5rem;
-  scale: 1.5;
-  background: rgba(255, 255, 255, 0);
 }
 
 .restaurant {
@@ -1120,12 +1139,13 @@ nav h1 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   gap: 2rem;
 }
 .restaurant__carte {
+  max-width: 1024px;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1294,6 +1314,9 @@ nav h1 {
   margin-top: 3rem;
   min-height: 198px;
   background: #353535;
+}
+.footer__container {
+  padding-top: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1303,9 +1326,8 @@ nav h1 {
           flex-flow: column nowrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding: 1rem;
 }
-.footer__link {
+.footer__container .footer__link {
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1314,24 +1336,28 @@ nav h1 {
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
+  padding: 1rem;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
-.footer__link i {
+.footer__container .footer__link i {
   scale: 0.75;
   padding-right: 0.5rem;
-  -ms-flex-item-align: center;
-      align-self: center;
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
 }
-.footer h1 {
+.footer__container h2 {
   margin: 0;
   padding: 0;
   font-size: 1.5rem;
   font-family: "shrikhand", sans-serif;
 }
 @media only screen and (min-width:768px) and (max-width:1024px), only screen and (min-width:1024px) {
-  .footer {
+  .footer__container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1339,9 +1365,9 @@ nav h1 {
     -webkit-box-direction: normal;
         -ms-flex-flow: row nowrap;
             flex-flow: row nowrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     max-height: 100px;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -8,17 +8,15 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  width: 100%;
+  background-color: $bg;
   animation: fade 0ms $loader-duration forwards;
   .load {
-    position: absolute;
-    top: 30%;
-    right: 50%;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
     padding: 2rem;
-    background-color: $bg;
     .spinner {
       position: absolute;
+      top: 30%;
       padding: 1rem;
       border-left: 0.5rem solid $primary;
       border-right: 0.5rem solid $secondary;
@@ -28,8 +26,7 @@
     }
     .load__text {
       position: absolute;
-      top: 200%;
-      left: -5vw;
+      top: 50%;
       font-size: 2rem;
       font-weight: 500;
       text-transform: uppercase;
@@ -37,12 +34,8 @@
       background-clip: text;
       -webkit-text-fill-color: transparent;
 
-      @media #{$small-down} {
-        left: -20vw;
-      }
-
       &::after {
-        content: ".";
+        content: "";
         animation: blink 0.5s infinite;
       }
     }
@@ -56,10 +49,12 @@
     visibility: hidden;
     height: 0;
   }
-  1% {
-    visibility: visible;
+  99% {
+    visibility: hidden;
+    height: 0;
   }
   100% {
+    visibility: visible;
     height: 100%;
   }
 }
@@ -106,12 +101,19 @@
     position: absolute;
     content: "...";
   }
-  100% {
+  75% {
     background: darken($bg, 35);
     background-clip: text;
     -webkit-text-fill-color: transparent;
     position: absolute;
     content: "....";
+  }
+  100% {
+    background: $tertiary;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    content: ".....";
   }
 }
 
@@ -222,16 +224,16 @@
   &__like {
     cursor: pointer;
     position: absolute;
-    height: 20px;
-    width: 20px;
-    bottom: 3rem;
-    right: 2rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    top: 2rem;
+    right: 1.8rem;
     opacity: 0;
     z-index: 1;
   }
   .fa-heart {
     position: absolute;
-    bottom: 3rem;
+    top: 2.1rem;
     right: 2rem;
     font-size: 1.5rem;
     transition: opacity 0.3s ease-in-out;

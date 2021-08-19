@@ -4,30 +4,36 @@
   margin-top: 3rem;
   min-height: 198px;
   background: $bg-footer;
-  @include flexcolumn;
-  justify-content: space-around;
-  padding: 1rem;
-  &__link {
-    color: #fff;
-    @include flexrow;
-    justify-content: flex-start;
-    i {
-      scale: 0.75;
-      padding-right: 0.5rem;
-      align-self: center;
+  &__container {
+    padding-top: 1rem;
+    @include flexcolumn;
+    justify-content: space-around;
+    .footer__link {
+      color: #fff;
+      @include flexrow;
+      padding: 1rem;
+      justify-content: flex-start;
+      i {
+        scale: 0.75;
+        padding-right: 0.5rem;
+        align-self: baseline;
+      }
+    }
+    h2 {
+      margin: 0;
+      padding: 0;
+      font-size: 1.5rem;
+      font-family: $font-primary;
     }
   }
-  h1 {
-    margin: 0;
-    padding: 0;
-    font-size: 1.5rem;
-    font-family: $font-primary;
-  }
-
-  @media #{$medium-up},
-  #{$large-up} {
-    @include flexrow;
-    align-items: center;
-    max-height: 100px;
+  &__container {
+    @media #{$medium-up},#{$large-up} {
+      max-width: 1024px;
+      width: 100%;
+      margin: 0 auto;
+      @include flexrow;
+      justify-content: space-between;
+      max-height: 100px;
+    }
   }
 }

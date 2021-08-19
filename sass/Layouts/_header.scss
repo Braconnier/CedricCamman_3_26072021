@@ -3,21 +3,26 @@
 
 header {
   height: 63px;
-  color: #000;
-  @include flexrow;
-  align-items: center;
-  justify-content: center;
-  position: relative;
   @include shadow($shadow: $bg-shadow);
-
-  h1 {
+  .header__container {
+    @include flexrow;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    max-width: 1024px;
+    margin: 0 auto;
+    position: relative;
+    color: #000;
+  }
+  h2 {
     font-family: $font-primary;
     font-weight: bold;
     font-size: 2rem;
   }
   .back {
     position: absolute;
-    top: 25px;
-    left: 10px;
+    top: 1rem;
+    left: 1.5rem;
+    font-size: 1.5rem;
   }
 }
