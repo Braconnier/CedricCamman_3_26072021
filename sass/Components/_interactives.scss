@@ -42,7 +42,7 @@
   }
 }
 .main-content {
-  animation: content-fade 0.25s $loader-duration both;
+  animation: content-fade 0.05s $loader-duration both;
 }
 @keyframes content-fade {
   0% {
@@ -262,8 +262,7 @@
   }
 }
 ///////////////////////////////   slide des check
-.restaurant__fiche:hover,
-.restaurant__fiche input[type="radio"]:checked {
+.restaurant__fiche:hover {
   @include shadow(darken($bg-shadow, 30%));
 
   .restaurant__fiche__plat {
