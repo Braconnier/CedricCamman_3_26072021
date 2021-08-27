@@ -31,7 +31,6 @@
       font-weight: 500;
       text-transform: uppercase;
       background: darken($bg, 30%);
-      background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
       &::after {
@@ -47,11 +46,7 @@
 @keyframes content-fade {
   0% {
     visibility: hidden;
-    height: 0;
-  }
-  99% {
-    visibility: hidden;
-    height: 0;
+    height: 0%;
   }
   100% {
     visibility: visible;
@@ -60,11 +55,11 @@
 }
 @keyframes fade {
   0% {
-    height: 100vh;
+    height: 100%;
     visibility: visible;
   }
   100% {
-    height: 0vh;
+    height: 0%;
     visibility: hidden;
   }
 }
@@ -80,35 +75,35 @@
 @keyframes blink {
   0% {
     background: $tertiary;
-    background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: absolute;
     content: ".";
   }
   25% {
     background: darken($bg, 35);
-    background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: absolute;
     content: "..";
   }
   50% {
     background: $tertiary;
-    background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: absolute;
     content: "...";
   }
   75% {
     background: darken($bg, 35);
-    background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: absolute;
     content: "....";
   }
   100% {
     background: $tertiary;
-    background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: absolute;
     content: ".....";
@@ -186,7 +181,7 @@
     opacity: 0;
     &:before {
       @include radient;
-      background-clip: text;
+      -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
   }
@@ -236,7 +231,7 @@
     opacity: 0;
     &:before {
       @include radient;
-      background-clip: text;
+      -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
   }

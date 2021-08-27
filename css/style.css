@@ -1,16 +1,17 @@
-@charset "UTF-8";
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-​ html,
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
 body,
-main,
-div,
-span,
-applet,
-object,
-iframe,
 h1,
 h2,
 h3,
@@ -18,98 +19,11 @@ h4,
 h5,
 h6,
 p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
 ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+ul {
   margin: 0;
   padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-
-body {
-  line-height: 1;
+  font-weight: normal;
 }
 
 ol,
@@ -117,22 +31,9 @@ ul {
   list-style: none;
 }
 
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /*    style starts here    */
@@ -434,7 +335,6 @@ header .back {
   font-weight: 500;
   text-transform: uppercase;
   background: #aaaaaa;
-  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -452,11 +352,7 @@ header .back {
 @-webkit-keyframes content-fade {
   0% {
     visibility: hidden;
-    height: 0;
-  }
-  99% {
-    visibility: hidden;
-    height: 0;
+    height: 0%;
   }
   100% {
     visibility: visible;
@@ -467,11 +363,7 @@ header .back {
 @keyframes content-fade {
   0% {
     visibility: hidden;
-    height: 0;
-  }
-  99% {
-    visibility: hidden;
-    height: 0;
+    height: 0%;
   }
   100% {
     visibility: visible;
@@ -480,21 +372,21 @@ header .back {
 }
 @-webkit-keyframes fade {
   0% {
-    height: 100vh;
+    height: 100%;
     visibility: visible;
   }
   100% {
-    height: 0vh;
+    height: 0%;
     visibility: hidden;
   }
 }
 @keyframes fade {
   0% {
-    height: 100vh;
+    height: 100%;
     visibility: visible;
   }
   100% {
-    height: 0vh;
+    height: 0%;
     visibility: hidden;
   }
 }
@@ -522,7 +414,6 @@ header .back {
   0% {
     background: #92e2d0;
     -webkit-background-clip: text;
-            background-clip: text;
     -webkit-text-fill-color: transparent;
     position: absolute;
     content: ".";
@@ -530,7 +421,6 @@ header .back {
   25% {
     background: #9d9d9d;
     -webkit-background-clip: text;
-            background-clip: text;
     -webkit-text-fill-color: transparent;
     position: absolute;
     content: "..";
@@ -538,7 +428,6 @@ header .back {
   50% {
     background: #92e2d0;
     -webkit-background-clip: text;
-            background-clip: text;
     -webkit-text-fill-color: transparent;
     position: absolute;
     content: "...";
@@ -546,7 +435,6 @@ header .back {
   75% {
     background: #9d9d9d;
     -webkit-background-clip: text;
-            background-clip: text;
     -webkit-text-fill-color: transparent;
     position: absolute;
     content: "....";
@@ -554,7 +442,6 @@ header .back {
   100% {
     background: #92e2d0;
     -webkit-background-clip: text;
-            background-clip: text;
     -webkit-text-fill-color: transparent;
     position: absolute;
     content: ".....";
@@ -564,7 +451,6 @@ header .back {
   0% {
     background: #92e2d0;
     -webkit-background-clip: text;
-            background-clip: text;
     -webkit-text-fill-color: transparent;
     position: absolute;
     content: ".";
@@ -572,7 +458,6 @@ header .back {
   25% {
     background: #9d9d9d;
     -webkit-background-clip: text;
-            background-clip: text;
     -webkit-text-fill-color: transparent;
     position: absolute;
     content: "..";
@@ -580,7 +465,6 @@ header .back {
   50% {
     background: #92e2d0;
     -webkit-background-clip: text;
-            background-clip: text;
     -webkit-text-fill-color: transparent;
     position: absolute;
     content: "...";
@@ -588,7 +472,6 @@ header .back {
   75% {
     background: #9d9d9d;
     -webkit-background-clip: text;
-            background-clip: text;
     -webkit-text-fill-color: transparent;
     position: absolute;
     content: "....";
@@ -596,7 +479,6 @@ header .back {
   100% {
     background: #92e2d0;
     -webkit-background-clip: text;
-            background-clip: text;
     -webkit-text-fill-color: transparent;
     position: absolute;
     content: ".....";
@@ -791,7 +673,6 @@ header .back {
   background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), color-stop(20%, #9356dc), to(#ff79da));
   background: linear-gradient(0deg, #9356dc 0%, #9356dc 20%, #ff79da 100%);
   -webkit-background-clip: text;
-          background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .container input[type=checkbox]:checked ~ .fas {
@@ -842,7 +723,6 @@ header .back {
   background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), color-stop(20%, #9356dc), to(#ff79da));
   background: linear-gradient(0deg, #9356dc 0%, #9356dc 20%, #ff79da 100%);
   -webkit-background-clip: text;
-          background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .restaurant__titre input[type=checkbox]:checked ~ .fas {
@@ -1281,8 +1161,7 @@ nav h1 {
   padding-top: 2rem;
   padding: 0.5rem;
   -ms-flex-item-align: end;
-      align-self: end;
-  padding-bottom: 0.75rem;
+      align-self: flex-end;
 }
 .restaurant__fiche__check {
   min-width: 4rem;
