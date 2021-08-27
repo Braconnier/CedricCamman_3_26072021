@@ -32,8 +32,8 @@
       text-transform: uppercase;
       background: darken($bg, 30%);
       background-clip: text;
-      -webkit-text-fill-color: transparent;
-
+      -webkit-background-clip: text;
+      color: transparent;
       &::after {
         content: "";
         animation: blink 0.5s infinite;
@@ -71,12 +71,10 @@
 @keyframes spin {
   0% {
     transform: rotate(0);
-    scale: 2 1;
   }
 
   100% {
     transform: rotate(3turn);
-    scale: 1 2;
   }
 }
 @keyframes blink {

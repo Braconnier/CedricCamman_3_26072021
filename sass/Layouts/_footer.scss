@@ -13,10 +13,9 @@
       @include flexrow;
       padding: 1rem;
       justify-content: flex-start;
+      align-items: center;
       i {
-        scale: 0.75;
         padding-right: 0.5rem;
-        align-self: baseline;
       }
     }
     h2 {
