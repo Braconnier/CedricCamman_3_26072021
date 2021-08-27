@@ -122,9 +122,7 @@
 @for $i from 1 through 4 {
   .restaurant__fiche:nth-child(#{$i}n) {
     animation-name: slide-fiche;
-    animation-delay: calc(
-      #{$loader-duration} + #{$i * strip-unit($delay-slide-cartes)}s
-    );
+    animation-delay: #{$i * strip-unit($delay-slide-cartes)}s;
     animation-duration: $duration-slide-cartes;
     animation-fill-mode: both;
     animation-timing-function: ease;
@@ -144,9 +142,7 @@
   @for $i from 1 through 4 {
     .restaurant__fiche:nth-child(#{$i}n) {
       animation-name: slide-fiche;
-      animation-delay: calc(
-        #{$loader-duration} + #{$i * strip-unit($delay-slide-cartes)}s
-      );
+      animation-delay: #{$i * strip-unit($delay-slide-cartes)}s;
       animation-duration: $duration-slide-cartes;
       animation-fill-mode: both;
       animation-timing-function: ease;
