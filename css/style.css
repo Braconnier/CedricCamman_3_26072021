@@ -138,7 +138,7 @@ table {
 /*    style starts here    */
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 a {
@@ -160,7 +160,7 @@ body {
 header {
   height: 63px;
   -webkit-box-shadow: 0 3px 10px 0px #dddddd;
-          box-shadow: 0 3px 10px 0px #dddddd;
+  box-shadow: 0 3px 10px 0px #dddddd;
 }
 header .header__container {
   display: -webkit-box;
@@ -168,15 +168,15 @@ header .header__container {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
   height: 100%;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   max-width: 1024px;
   margin: 0 auto;
   position: relative;
@@ -202,14 +202,14 @@ header .back {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .localiser i {
   margin-right: 1rem;
@@ -223,14 +223,14 @@ header .back {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .conteneur-fonctionnement p {
   text-align: center;
@@ -253,25 +253,26 @@ header .back {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background: #fff;
 }
-@media only screen and (min-width:768px) and (max-width:1024px), only screen and (min-width:1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px),
+  only screen and (min-width: 1024px) {
   .fonctionnement {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row nowrap;
-            flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
     height: 200px;
     border-radius: 1rem;
     margin: 0.5rem;
@@ -284,7 +285,8 @@ header .back {
   font-size: 1.5rem;
   font-weight: 500;
 }
-@media only screen and (max-width:365px), only screen and (min-width:365px) and (max-width:768px) {
+@media only screen and (max-width: 365px),
+  only screen and (min-width: 365px) and (max-width: 768px) {
   .fonctionnement__titre {
     position: inherit;
     padding-bottom: 1rem;
@@ -295,32 +297,32 @@ header .back {
   height: 72px;
   background: #f6f6f6;
   -webkit-box-shadow: 0 3px 10px 0px #dddddd;
-          box-shadow: 0 3px 10px 0px #dddddd;
+  box-shadow: 0 3px 10px 0px #dddddd;
   border-radius: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: relative;
 }
 .fonctionnement__etape__description {
   padding-right: 1rem;
 }
-@media only screen and (min-width:768px) and (max-width:1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .fonctionnement__etape {
     max-width: 30%;
   }
 }
-@media only screen and (min-width:1024px) {
+@media only screen and (min-width: 1024px) {
   .fonctionnement__etape {
     max-width: 30%;
   }
@@ -344,14 +346,14 @@ header .back {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   min-width: 1.5rem;
   height: 1.5rem;
   background: #9356dc;
@@ -359,7 +361,7 @@ header .back {
   border-radius: 50%;
   margin-left: -1rem;
 }
-@media only screen and (max-width:365px) {
+@media only screen and (max-width: 365px) {
   .fonctionnement__etape {
     width: 285px;
   }
@@ -373,28 +375,35 @@ header .back {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   border-radius: 25px;
   color: #fff;
   font-family: "roboto", sans-serif;
   background: #9356dc;
   -webkit-box-shadow: 0 3px 10px 0px #aaaaaa;
-          box-shadow: 0 3px 10px 0px #aaaaaa;
-  background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), color-stop(20%, #9356dc), to(#ff79da));
+  box-shadow: 0 3px 10px 0px #aaaaaa;
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(#9356dc),
+    color-stop(20%, #9356dc),
+    to(#ff79da)
+  );
   background: linear-gradient(0deg, #9356dc 0%, #9356dc 20%, #ff79da 100%);
 }
 .button:hover {
   -webkit-filter: opacity(0.7);
-          filter: opacity(0.7);
+  filter: opacity(0.7);
   -webkit-box-shadow: 0 3px 10px 0px #5e5e5e;
-          box-shadow: 0 3px 10px 0px #5e5e5e;
+  box-shadow: 0 3px 10px 0px #5e5e5e;
 }
 
 .loader {
@@ -405,15 +414,15 @@ header .back {
   height: 100vh;
   background-color: #f6f6f6;
   -webkit-animation: fade 0ms 2s forwards;
-          animation: fade 0ms 2s forwards;
+  animation: fade 0ms 2s forwards;
 }
 .loader .load {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding: 2rem;
 }
 .loader .load .spinner {
@@ -425,7 +434,7 @@ header .back {
   opacity: 0.5;
   border-radius: 50%;
   -webkit-animation: spin 2s forwards ease-in-out;
-          animation: spin 2s forwards ease-in-out;
+  animation: spin 2s forwards ease-in-out;
 }
 .loader .load .load__text {
   position: absolute;
@@ -435,18 +444,17 @@ header .back {
   text-transform: uppercase;
   background: #aaaaaa;
   -webkit-background-clip: text;
-          background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .loader .load .load__text::after {
   content: "";
   -webkit-animation: blink 0.5s infinite;
-          animation: blink 0.5s infinite;
+  animation: blink 0.5s infinite;
 }
 
 .main-content {
   -webkit-animation: content-fade 0.05s 2s both;
-          animation: content-fade 0.05s 2s both;
+  animation: content-fade 0.05s 2s both;
 }
 
 @-webkit-keyframes content-fade {
@@ -501,32 +509,31 @@ header .back {
 @-webkit-keyframes spin {
   0% {
     -webkit-transform: rotate(0);
-            transform: rotate(0);
+    transform: rotate(0);
     scale: 2 1;
   }
   100% {
     -webkit-transform: rotate(3turn);
-            transform: rotate(3turn);
+    transform: rotate(3turn);
     scale: 1 2;
   }
 }
 @keyframes spin {
   0% {
     -webkit-transform: rotate(0);
-            transform: rotate(0);
-    scale: 2 1;
+    transform: rotate(0);
+    scale: (2 1);
   }
   100% {
     -webkit-transform: rotate(3turn);
-            transform: rotate(3turn);
-    scale: 1 2;
+    transform: rotate(3turn);
+    scale: (1 2);
   }
 }
 @-webkit-keyframes blink {
   0% {
     background: #92e2d0;
     -webkit-background-clip: text;
-            background-clip: text;
     -webkit-text-fill-color: transparent;
     position: absolute;
     content: ".";
@@ -534,7 +541,6 @@ header .back {
   25% {
     background: #9d9d9d;
     -webkit-background-clip: text;
-            background-clip: text;
     -webkit-text-fill-color: transparent;
     position: absolute;
     content: "..";
@@ -542,7 +548,6 @@ header .back {
   50% {
     background: #92e2d0;
     -webkit-background-clip: text;
-            background-clip: text;
     -webkit-text-fill-color: transparent;
     position: absolute;
     content: "...";
@@ -550,7 +555,6 @@ header .back {
   75% {
     background: #9d9d9d;
     -webkit-background-clip: text;
-            background-clip: text;
     -webkit-text-fill-color: transparent;
     position: absolute;
     content: "....";
@@ -558,7 +562,6 @@ header .back {
   100% {
     background: #92e2d0;
     -webkit-background-clip: text;
-            background-clip: text;
     -webkit-text-fill-color: transparent;
     position: absolute;
     content: ".....";
@@ -568,7 +571,6 @@ header .back {
   0% {
     background: #92e2d0;
     -webkit-background-clip: text;
-            background-clip: text;
     -webkit-text-fill-color: transparent;
     position: absolute;
     content: ".";
@@ -576,7 +578,6 @@ header .back {
   25% {
     background: #9d9d9d;
     -webkit-background-clip: text;
-            background-clip: text;
     -webkit-text-fill-color: transparent;
     position: absolute;
     content: "..";
@@ -584,7 +585,6 @@ header .back {
   50% {
     background: #92e2d0;
     -webkit-background-clip: text;
-            background-clip: text;
     -webkit-text-fill-color: transparent;
     position: absolute;
     content: "...";
@@ -592,7 +592,6 @@ header .back {
   75% {
     background: #9d9d9d;
     -webkit-background-clip: text;
-            background-clip: text;
     -webkit-text-fill-color: transparent;
     position: absolute;
     content: "....";
@@ -600,7 +599,6 @@ header .back {
   100% {
     background: #92e2d0;
     -webkit-background-clip: text;
-            background-clip: text;
     -webkit-text-fill-color: transparent;
     position: absolute;
     content: ".....";
@@ -608,66 +606,66 @@ header .back {
 }
 .restaurant__fiche:nth-child(1n) {
   -webkit-animation-name: slide-fiche;
-          animation-name: slide-fiche;
+  animation-name: slide-fiche;
   -webkit-animation-delay: 0.125s;
-          animation-delay: 0.125s;
+  animation-delay: 0.125s;
   -webkit-animation-duration: 0.3s;
-          animation-duration: 0.3s;
+  animation-duration: 0.3s;
   -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  animation-fill-mode: both;
   -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
+  animation-timing-function: ease;
 }
 
 .restaurant__fiche:nth-child(2n) {
   -webkit-animation-name: slide-fiche;
-          animation-name: slide-fiche;
+  animation-name: slide-fiche;
   -webkit-animation-delay: 0.25s;
-          animation-delay: 0.25s;
+  animation-delay: 0.25s;
   -webkit-animation-duration: 0.3s;
-          animation-duration: 0.3s;
+  animation-duration: 0.3s;
   -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  animation-fill-mode: both;
   -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
+  animation-timing-function: ease;
 }
 
 .restaurant__fiche:nth-child(3n) {
   -webkit-animation-name: slide-fiche;
-          animation-name: slide-fiche;
+  animation-name: slide-fiche;
   -webkit-animation-delay: 0.375s;
-          animation-delay: 0.375s;
+  animation-delay: 0.375s;
   -webkit-animation-duration: 0.3s;
-          animation-duration: 0.3s;
+  animation-duration: 0.3s;
   -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  animation-fill-mode: both;
   -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
+  animation-timing-function: ease;
 }
 
 .restaurant__fiche:nth-child(4n) {
   -webkit-animation-name: slide-fiche;
-          animation-name: slide-fiche;
+  animation-name: slide-fiche;
   -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  animation-delay: 0.5s;
   -webkit-animation-duration: 0.3s;
-          animation-duration: 0.3s;
+  animation-duration: 0.3s;
   -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  animation-fill-mode: both;
   -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
+  animation-timing-function: ease;
 }
 
 @-webkit-keyframes slide-fiche {
   0% {
     opacity: 0;
     -webkit-transform: translateY(2rem);
-            transform: translateY(2rem);
+    transform: translateY(2rem);
   }
   100% {
     opacity: 1;
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
@@ -675,77 +673,77 @@ header .back {
   0% {
     opacity: 0;
     -webkit-transform: translateY(2rem);
-            transform: translateY(2rem);
+    transform: translateY(2rem);
   }
   100% {
     opacity: 1;
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
 }
-@media only screen and (min-width:1024px) {
+@media only screen and (min-width: 1024px) {
   .restaurant__fiche:nth-child(1n) {
     -webkit-animation-name: slide-fiche;
-            animation-name: slide-fiche;
+    animation-name: slide-fiche;
     -webkit-animation-delay: 0.125s;
-            animation-delay: 0.125s;
+    animation-delay: 0.125s;
     -webkit-animation-duration: 0.3s;
-            animation-duration: 0.3s;
+    animation-duration: 0.3s;
     -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
+    animation-fill-mode: both;
     -webkit-animation-timing-function: ease;
-            animation-timing-function: ease;
+    animation-timing-function: ease;
   }
 
   .restaurant__fiche:nth-child(2n) {
     -webkit-animation-name: slide-fiche;
-            animation-name: slide-fiche;
+    animation-name: slide-fiche;
     -webkit-animation-delay: 0.25s;
-            animation-delay: 0.25s;
+    animation-delay: 0.25s;
     -webkit-animation-duration: 0.3s;
-            animation-duration: 0.3s;
+    animation-duration: 0.3s;
     -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
+    animation-fill-mode: both;
     -webkit-animation-timing-function: ease;
-            animation-timing-function: ease;
+    animation-timing-function: ease;
   }
 
   .restaurant__fiche:nth-child(3n) {
     -webkit-animation-name: slide-fiche;
-            animation-name: slide-fiche;
+    animation-name: slide-fiche;
     -webkit-animation-delay: 0.375s;
-            animation-delay: 0.375s;
+    animation-delay: 0.375s;
     -webkit-animation-duration: 0.3s;
-            animation-duration: 0.3s;
+    animation-duration: 0.3s;
     -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
+    animation-fill-mode: both;
     -webkit-animation-timing-function: ease;
-            animation-timing-function: ease;
+    animation-timing-function: ease;
   }
 
   .restaurant__fiche:nth-child(4n) {
     -webkit-animation-name: slide-fiche;
-            animation-name: slide-fiche;
+    animation-name: slide-fiche;
     -webkit-animation-delay: 0.5s;
-            animation-delay: 0.5s;
+    animation-delay: 0.5s;
     -webkit-animation-duration: 0.3s;
-            animation-duration: 0.3s;
+    animation-duration: 0.3s;
     -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
+    animation-fill-mode: both;
     -webkit-animation-timing-function: ease;
-            animation-timing-function: ease;
+    animation-timing-function: ease;
   }
 
   @-webkit-keyframes slide-fiche {
     0% {
       opacity: 0;
       -webkit-transform: translateX(3rem);
-              transform: translateX(3rem);
+      transform: translateX(3rem);
     }
     100% {
       opacity: 1;
       -webkit-transform: translateX(0);
-              transform: translateX(0);
+      transform: translateX(0);
     }
   }
 
@@ -753,18 +751,18 @@ header .back {
     0% {
       opacity: 0;
       -webkit-transform: translateX(3rem);
-              transform: translateX(3rem);
+      transform: translateX(3rem);
     }
     100% {
       opacity: 1;
       -webkit-transform: translateX(0);
-              transform: translateX(0);
+      transform: translateX(0);
     }
   }
 }
 .container:hover {
   -webkit-box-shadow: 0 3px 10px 0px #919191;
-          box-shadow: 0 3px 10px 0px #919191;
+  box-shadow: 0 3px 10px 0px #919191;
 }
 
 .container {
@@ -792,29 +790,35 @@ header .back {
   opacity: 0;
 }
 .container .fas:before {
-  background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), color-stop(20%, #9356dc), to(#ff79da));
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(#9356dc),
+    color-stop(20%, #9356dc),
+    to(#ff79da)
+  );
   background: linear-gradient(0deg, #9356dc 0%, #9356dc 20%, #ff79da 100%);
   -webkit-background-clip: text;
-          background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.container input[type=checkbox]:checked ~ .fas {
+.container input[type="checkbox"]:checked ~ .fas {
   opacity: 1;
 }
-.container input[type=checkbox]:checked ~ .far {
+.container input[type="checkbox"]:checked ~ .far {
   opacity: 0;
 }
 @media (hover: hover) {
-  .container input[type=checkbox]:hover ~ .fas {
+  .container input[type="checkbox"]:hover ~ .fas {
     opacity: 1;
   }
-  .container input[type=checkbox]:hover ~ .far {
+  .container input[type="checkbox"]:hover ~ .far {
     opacity: 0;
   }
-  .container input[type=checkbox]:hover .container,
-.container .container .container {
+  .container input[type="checkbox"]:hover .container,
+  .container .container .container {
     -webkit-box-shadow: 0 3px 10px 0px #919191;
-            box-shadow: 0 3px 10px 0px #919191;
+    box-shadow: 0 3px 10px 0px #919191;
   }
 }
 
@@ -843,59 +847,65 @@ header .back {
   opacity: 0;
 }
 .restaurant__titre .fas.fa-heart:before {
-  background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), color-stop(20%, #9356dc), to(#ff79da));
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(#9356dc),
+    color-stop(20%, #9356dc),
+    to(#ff79da)
+  );
   background: linear-gradient(0deg, #9356dc 0%, #9356dc 20%, #ff79da 100%);
   -webkit-background-clip: text;
-          background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.restaurant__titre input[type=checkbox]:checked ~ .fas {
+.restaurant__titre input[type="checkbox"]:checked ~ .fas {
   opacity: 1;
 }
-.restaurant__titre input[type=checkbox]:checked ~ .far {
+.restaurant__titre input[type="checkbox"]:checked ~ .far {
   opacity: 0;
 }
 @media (hover: hover) {
-  .restaurant__titre input[type=checkbox]:hover ~ .fas {
+  .restaurant__titre input[type="checkbox"]:hover ~ .fas {
     opacity: 1;
   }
-  .restaurant__titre input[type=checkbox]:hover ~ .far {
+  .restaurant__titre input[type="checkbox"]:hover ~ .far {
     opacity: 0;
   }
 }
 
 .restaurant__fiche:hover {
   -webkit-box-shadow: 0 3px 10px 0px #919191;
-          box-shadow: 0 3px 10px 0px #919191;
+  box-shadow: 0 3px 10px 0px #919191;
 }
 .restaurant__fiche:hover .restaurant__fiche__plat {
   -webkit-animation: slide 0.5s both;
-          animation: slide 0.5s both;
+  animation: slide 0.5s both;
 }
 .restaurant__fiche:hover .restaurant__fiche__check > i {
   -webkit-animation: circle-spin 0.5s both;
-          animation: circle-spin 0.5s both;
+  animation: circle-spin 0.5s both;
 }
 
 @-webkit-keyframes circle-spin {
   from {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
     -webkit-transform: rotate(1turn);
-            transform: rotate(1turn);
+    transform: rotate(1turn);
   }
 }
 
 @keyframes circle-spin {
   from {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
     -webkit-transform: rotate(1turn);
-            transform: rotate(1turn);
+    transform: rotate(1turn);
   }
 }
 @-webkit-keyframes slide {
@@ -908,7 +918,7 @@ header .back {
     min-width: 15rem;
   }
 }
-@media only screen and (max-width:365px) {
+@media only screen and (max-width: 365px) {
   @-webkit-keyframes slide {
     to {
       min-width: 10rem;
@@ -920,7 +930,7 @@ header .back {
     }
   }
 }
-@media only screen and (min-width:1024px) {
+@media only screen and (min-width: 1024px) {
   @-webkit-keyframes slide {
     to {
       min-width: 13rem;
@@ -944,8 +954,8 @@ nav {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
   gap: 1rem;
   padding: 0.5rem;
 }
@@ -956,24 +966,25 @@ nav h1 {
   font-size: 1.5rem;
   font-weight: 500;
 }
-@media only screen and (min-width:1024px), only screen and (min-width:768px) and (max-width:1024px) {
+@media only screen and (min-width: 1024px),
+  only screen and (min-width: 768px) and (max-width: 1024px) {
   nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
     -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
   }
   nav .container {
     min-width: 48%;
   }
 }
-@media only screen and (min-width:365px) and (max-width:768px) {
+@media only screen and (min-width: 365px) and (max-width: 768px) {
   nav h1 {
     padding-left: 0;
   }
@@ -991,20 +1002,20 @@ nav h1 {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
   border-radius: 1rem;
   -webkit-box-shadow: 0 3px 10px 0px #dddddd;
-          box-shadow: 0 3px 10px 0px #dddddd;
+  box-shadow: 0 3px 10px 0px #dddddd;
 }
-@media only screen and (min-width:768px) and (max-width:1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .restaurants__carte {
-    min-width: calc(0.5 *768px - 16px);
+    min-width: calc(0.5 * 768px - 16px);
   }
 }
-@media only screen and (min-width:1024px) {
+@media only screen and (min-width: 1024px) {
   .restaurants__carte {
-    width: calc(0.5 *1024px - 16px);
+    width: calc(0.5 * 1024px - 16px);
   }
 }
 .restaurants__carte__imagebox {
@@ -1014,7 +1025,7 @@ nav h1 {
 }
 .restaurants__carte__imagebox > img {
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -1029,14 +1040,14 @@ nav h1 {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   padding: 1rem;
 }
 .restaurants__carte__description h3 {
@@ -1073,7 +1084,7 @@ nav h1 {
 }
 .restaurant__imagebox > img {
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -1087,14 +1098,14 @@ nav h1 {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
   padding-left: 1rem;
   padding-bottom: 2rem;
   margin-top: -4rem;
@@ -1104,7 +1115,8 @@ nav h1 {
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
 }
-@media only screen and (min-width:365px) and (max-width:768px), only screen and (min-width:768px) and (max-width:1024px) {
+@media only screen and (min-width: 365px) and (max-width: 768px),
+  only screen and (min-width: 768px) and (max-width: 1024px) {
   .restaurant__titre .titre__box {
     width: 23rem;
     margin: 0 auto;
@@ -1118,7 +1130,9 @@ nav h1 {
   font-family: "shrikhand", sans-serif;
   font-size: 1.8rem;
 }
-@media only screen and (min-width:365px) and (max-width:768px), only screen and (min-width:768px) and (max-width:1024px), only screen and (min-width:1024px) {
+@media only screen and (min-width: 365px) and (max-width: 768px),
+  only screen and (min-width: 768px) and (max-width: 1024px),
+  only screen and (min-width: 1024px) {
   .restaurant__titre .titre__box h1 {
     font-size: 1.8rem;
   }
@@ -1131,13 +1145,13 @@ nav h1 {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -ms-flex-line-pack: center;
-      align-content: center;
+  align-content: center;
   gap: 2rem;
 }
 .restaurant__carte {
@@ -1148,14 +1162,14 @@ nav h1 {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   gap: 1rem;
   padding: 0.5rem;
 }
@@ -1169,7 +1183,7 @@ nav h1 {
   height: 3px;
   background: #92e2d0;
 }
-@media only screen and (min-width:1024px) {
+@media only screen and (min-width: 1024px) {
   .restaurant__carte {
     width: 100%;
   }
@@ -1181,22 +1195,22 @@ nav h1 {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
   gap: 1rem;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 .restaurant .service:nth-last-child(2) {
   padding-bottom: 2rem;
 }
-@media only screen and (min-width:1024px) {
+@media only screen and (min-width: 1024px) {
   .restaurant .service {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
   }
 }
 .restaurant .button {
@@ -1206,11 +1220,11 @@ nav h1 {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .restaurant__fiche {
@@ -1222,23 +1236,23 @@ nav h1 {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   border-radius: 1rem;
   background: #fff;
   overflow: hidden;
   -webkit-box-shadow: 0 3px 10px 0px #dddddd;
-          box-shadow: 0 3px 10px 0px #dddddd;
+  box-shadow: 0 3px 10px 0px #dddddd;
 }
-@media only screen and (max-width:365px) {
+@media only screen and (max-width: 365px) {
   .restaurant__fiche {
     max-width: 18rem;
   }
 }
-@media only screen and (min-width:1024px) {
+@media only screen and (min-width: 1024px) {
   .restaurant__fiche {
     max-width: 20rem;
   }
@@ -1247,12 +1261,12 @@ nav h1 {
   min-width: 19.5rem;
   height: 100%;
 }
-@media only screen and (max-width:365px) {
+@media only screen and (max-width: 365px) {
   .restaurant__fiche__plat {
     min-width: 15.5rem;
   }
 }
-@media only screen and (min-width:1024px) {
+@media only screen and (min-width: 1024px) {
   .restaurant__fiche__plat {
     min-width: 17.5rem;
   }
@@ -1266,7 +1280,7 @@ nav h1 {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-@media only screen and (max-width:365px) {
+@media only screen and (max-width: 365px) {
   .restaurant__fiche__plat__nomplat {
     font-size: 1rem;
   }
@@ -1285,7 +1299,7 @@ nav h1 {
   padding-top: 2rem;
   padding: 0.5rem;
   -ms-flex-item-align: end;
-      align-self: end;
+  align-self: end;
   padding-bottom: 0.75rem;
 }
 .restaurant__fiche__check {
@@ -1297,11 +1311,11 @@ nav h1 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .restaurant__fiche__check i.fas.fa-check-circle {
   display: inline-block;
@@ -1320,10 +1334,10 @@ nav h1 {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
 .footer__container .footer__link {
   color: #fff;
@@ -1332,18 +1346,18 @@ nav h1 {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
   padding: 1rem;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 }
 .footer__container .footer__link i {
-  scale: 0.75;
+  scale: (0.75);
   padding-right: 0.5rem;
   -ms-flex-item-align: baseline;
-      align-self: baseline;
+  align-self: baseline;
 }
 .footer__container h2 {
   margin: 0;
@@ -1351,7 +1365,8 @@ nav h1 {
   font-size: 1.5rem;
   font-family: "shrikhand", sans-serif;
 }
-@media only screen and (min-width:768px) and (max-width:1024px), only screen and (min-width:1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px),
+  only screen and (min-width: 1024px) {
   .footer__container {
     max-width: 1024px;
     width: 100%;
@@ -1361,11 +1376,11 @@ nav h1 {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row nowrap;
-            flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     max-height: 100px;
   }
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
